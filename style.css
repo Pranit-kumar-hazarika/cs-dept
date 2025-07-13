@@ -6,7 +6,7 @@
 }
 body, html {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
+  background-color: #fbfbfb;
   color: white;
   overflow-x: hidden;
 }
@@ -151,8 +151,8 @@ body, html {
   top: 0;
   left: 0;
   height: 100%;
-  width: 200%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+  width: 300%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.824), transparent);
   z-index: 2;
 }
 
@@ -171,4 +171,8 @@ body, html {
 .hero-text h2 {
   font-size: 36px;
   margin-top: 10px;
+}
+
+dev {
+  
 }
