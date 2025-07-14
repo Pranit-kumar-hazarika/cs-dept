@@ -160,8 +160,8 @@ body, html {
   top: 0;
   left: 0;
   height: 100%;
-  width: 300%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.79), transparent);
+  width: 180%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.938), transparent);
   z-index: 2;
 }
 
@@ -183,6 +183,21 @@ body, html {
   font-size: 36px;
   margin-top: -10px;
 }
-.hero-quote{
-  position:absolute
+.hero-quote {
+  position: absolute;
+  z-index: 3;
+  max-width: 700px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #f0f0f0;
+  line-height: 1.2;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 0px) {
+  .hero-quote {
+    top: 75%;
+    font-size: 16px;
+    max-width: 90%;
+  }
 }
