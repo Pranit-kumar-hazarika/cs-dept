@@ -181,5 +181,8 @@ body, html {
 
 .hero-text h2 {
   font-size: 36px;
-  margin-top: -15px;
+  margin-top: -10px;
+}
+.hero-quote{
+  position:absolute
 }
