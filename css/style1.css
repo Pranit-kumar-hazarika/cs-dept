@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fbfbfb;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  background: #2779acbd;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #00ffcc;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: #b2b8df;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-toggle:hover {
+  background: #333;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  top: 72px;
+  right: 5%;
+  width: 90%;
+  z-index: 999;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+}
+
+.mobile-item {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 0;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.256);
+  display: block;
+  width: 100%;
+  transition: color 0.3s ease;
+}
+
+.mobile-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-item:hover {
+  color: #00b8a9;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .nav-item.desktop {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}

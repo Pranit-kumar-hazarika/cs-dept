@@ -54,8 +54,9 @@ body, html {
 }
 
 .nav-item {
+  text-decoration: none;
   font-size: 16px;
-  color: #fff;
+  color: #ffffff;
   font-weight: 500;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -79,12 +80,13 @@ body, html {
 .menu-toggle:hover {
   background: #333;
 }
+
 /* MOBILE MENU */
 .mobile-menu {
   display: none;
   flex-direction: column;
   background-color: #ffffff;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 0 0 12px 12px;
   position: absolute;
   top: 72px;
@@ -93,18 +95,25 @@ body, html {
   z-index: 999;
   box-shadow: 0 5px 10px rgba(0,0,0,0.4);
 }
+
 .mobile-item {
+  text-decoration: none;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  padding: 10px 0;
-  border-bottom: 1px solid #333;
-  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 0;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.256);
+  display: block;
+  width: 100%;
+  transition: color 0.3s ease;
 }
+
 .mobile-item:last-child {
   border-bottom: none;
 }
+
 .mobile-item:hover {
-  color: #00ffcc;
+  color: #00b8a9;
 }
 
 /* RESPONSIVENESS */
@@ -123,7 +132,6 @@ body, html {
   }
 }
 
-
 /* BACKGROUND SLIDER */
 .slider-container {
   position: relative;
@@ -141,6 +149,7 @@ body, html {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
+
 .slide.active {
   opacity: 1;
 }
@@ -152,7 +161,7 @@ body, html {
   left: 0;
   height: 100%;
   width: 300%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.824), transparent);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.79), transparent);
   z-index: 2;
 }
 
@@ -164,10 +173,12 @@ body, html {
   z-index: 3;
   transform: translateY(-10%);
 }
+
 .hero-text h1 {
   font-size: 90px;
   font-weight: bold;
 }
+
 .hero-text h2 {
   font-size: 36px;
   margin-top: 10px;

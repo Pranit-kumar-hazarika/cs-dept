@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media</title>
+    <link rel="stylesheet" href="/css/style1.css">
 </head>
 <body>
-    
+        <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <img src="/image/BClogo.png" alt="Logo" class="logo">
+                <span class="brand">Bahona College</span>
+            </div>
+            <div class="nav-right">
+                <span><a href="/index.html" class="nav-item desktop">HOME</a></span>
+                <span><a href="/tabs/faculty.html" class="nav-item desktop">FACULTY</a></span>
+                <span><a href="/tabs/about.html" class="nav-item desktop">ABOUT</a></span>
+                <span><a href="/tabs/media.html" class="nav-item desktop">MEDIA</a></span>
+                <span class="nav-item desktop">JOIN</span>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </nav>
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <span><a href="/index.html" class="mobile-item">HOME</a></span>
+            <span><a href="/tabs/faculty.html" class="mobile-item">FACULTY</a></span>
+            <span><a href="/tabs/about.html" class="mobile-item">ABOUT</a></span>
+            <span><a href="/tabs/media.html" class="mobile-item">MEDIA</a></span>
+            <span class="mobile-item">JOIN</span>
+        </div>
+    </header>
+    <script src="/js/script1.js"></script>
 </body>
 </html>
