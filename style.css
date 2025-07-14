@@ -167,19 +167,19 @@ body, html {
 
 /* TEXT ON IMAGE */
 .hero-text {
-  position: absolute;
-  top: 50%;
+  position:absolute;
+  top: 55%;
   left: 5%;
   z-index: 3;
   transform: translateY(-10%);
 }
 
 .hero-text h1 {
-  font-size: 90px;
+  font-size: 75px;
   font-weight: bold;
 }
 
 .hero-text h2 {
   font-size: 36px;
-  margin-top: 10px;
+  margin-top: -15px;
 }
