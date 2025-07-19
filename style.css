@@ -170,6 +170,7 @@ body, html {
   overflow: hidden;
 }
 
+
 .slide {
   position: absolute;
   height: 100%;
@@ -201,7 +202,7 @@ body, html {
   top: 55%;
   left: 5%;
   z-index: 3;
-  transform: translateY(-35%);
+  transform: translateY(-10%);
 }
 
 .hero-text h1 {
@@ -232,18 +233,19 @@ body, html {
   }
 }
 #faculty {
-  background-color:#2779ac89;
+  background-color:#2779acbc;
   padding: 60px 20px;
   margin: 20px 10px auto;
   border-radius: 12px;
   text-align: center;
-  color: #000;
+  color: #000000;
 }
 
 .section-title {
   font-size: 2rem;
   margin-bottom: 40px;
   font-weight: bold;
+  color: #f3f3f3;
 }
 
 .faculty-container {
@@ -267,7 +269,7 @@ body, html {
 
 .faculty-box img {
   width: 100%;
-  height: 150px;
+  height: 250px;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 10px;
@@ -289,17 +291,17 @@ body, html {
   position: absolute;
   left: 50%;
   top: 0;
-  width: 4px;
+  width: 3px;
   height: 100%;
-  background-color: #000;
+  background-color: #000000ac;
   transform: translateX(-50%);
 }
 
 .horizontal-line {
   position: absolute;
-  width: 60px;
+  width: 50px;
   height: 4px;
-  background-color: #000;
+  background-color: #000000d4;
 }
 
 .top-line {
@@ -328,4 +330,40 @@ body, html {
   .faculty-box {
     margin-bottom: 20px;
   }
+}
+.footer {
+  background-color: #1b3c53; /* matches your theme */
+  color: #f9f3ef;
+  padding: 20px 0;
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #f9f3ef;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #d2c1b6; /* slight hover effect */
 }
