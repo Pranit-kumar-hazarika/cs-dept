@@ -95,11 +95,27 @@ body, html {
 .nav-item:hover {
   color: #00ffcc;
 }
+.join-box {
+  padding: 6px 16px;
+  border: 2px solid white;
+  background: white;
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-style: bl;
+}
+
+.join-box:hover {
+  background-color: white;
+  color: #007bff;
+}
 
 .menu-toggle {
+  display: none;
   font-size: 24px;
   background: #b2b8df;
-  color: #fff;
+  color: #000000;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
