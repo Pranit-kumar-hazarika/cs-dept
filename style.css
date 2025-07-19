@@ -139,6 +139,7 @@ body, html {
   width: 90%;
   z-index: 999;
   box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  mask-image: linear-gradient(to top ,#000000 90%,transparent );
 }
 
 .mobile-item {
@@ -146,8 +147,7 @@ body, html {
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 16px;
-  padding: 5px 0;
-  border-bottom: 1.5px solid rgba(0, 0, 0, 0.256);
+  padding: 5px ;
   display: block;
   width: 100%;
   transition: color 0.3s ease;
@@ -183,7 +183,7 @@ body, html {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-    mask-image: linear-gradient(to bottom ,#000000 94%,transparent );
+  mask-image: linear-gradient(to bottom ,#000000 94%,transparent );
 }
 
 
