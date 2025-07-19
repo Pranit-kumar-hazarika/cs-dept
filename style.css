@@ -250,16 +250,17 @@ body, html {
 }
 #faculty {
   background-color:#2779acbc;
-  padding: 60px 20px;
-  margin: 20px 10px auto;
+  padding: 30px 0px;
+  margin: 20px 30px auto;
   border-radius: 12px;
   text-align: center;
   color: #000000;
-  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.322);
+  box-shadow: 1px 4px 10px  rgba(255, 255, 255, 0.308);
 }
 
 .section-title {
   font-size: 2rem;
+  text-decoration: underline rgba(0, 0, 0, 0.715);
   margin-bottom: 40px;
   font-weight: bold;
   color: #f3f3f3;
@@ -307,11 +308,11 @@ body, html {
 }
 
 .vertical-line {
-  position: absolute;
+  position:absolute;
   left: 50%;
-  top: 0;
   width: 3px;
-  height: 100%;
+  top: -63%;
+  height: 160%;
   background-color: #000000cb;
   transform: translateX(-50%);
 }
