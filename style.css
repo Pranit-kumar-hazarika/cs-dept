@@ -234,7 +234,7 @@ body, html {
   position: absolute;
   z-index: 3;
   max-width: 700px;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 400;
   color: #f0f0f0;
   line-height: 1.2;
@@ -302,8 +302,8 @@ body, html {
 }
 
 .connector {
-  position: relative;
-  width: 100px;
+  position :relative;
+  width: 30%;
   height: 200px;
 }
 
@@ -319,9 +319,9 @@ body, html {
 
 .horizontal-line {
   position: absolute;
-  width: 50px;
-  height: 4px;
-  background-color: #000000d4;
+  width: 130px ;
+  height: 3px;
+  background-color:  #000000d4;
 }
 
 .top-line {
