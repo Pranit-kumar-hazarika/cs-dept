@@ -133,7 +133,7 @@ body, html {
   background-color: #ffffff;
   padding: 12px 24px;
   border-radius: 0 0 12px 12px;
-  position: absolute;
+  position: fixed;
   top: 72px;
   right: 5%;
   width: 90%;
