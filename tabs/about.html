@@ -9,29 +9,53 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-left">
-                <img src="/image/BClogo.png" alt="Logo" class="logo">
-                <span class="brand">Bahona College</span>
-            </div>
-            <div class="nav-right">
-                <span><a href="/index.html" class="nav-item desktop">HOME</a></span>
-                <span><a href="/tabs/faculty.html" class="nav-item desktop">FACULTY</a></span>
-                <span><a href="/tabs/about.html" class="nav-item desktop">ABOUT</a></span>
-                <span><a href="/tabs/media.html" class="nav-item desktop">MEDIA</a></span>
-                <span class="nav-item desktop">JOIN</span>
-                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            </div>
-        </nav>
-        <!-- MOBILE MENU -->
-        <div class="mobile-menu" id="mobileMenu">
-            <span><a href="/index.html" class="mobile-item">HOME</a></span>
-            <span><a href="/tabs/faculty.html" class="mobile-item">FACULTY</a></span>
-            <span><a href="/tabs/about.html" class="mobile-item">ABOUT</a></span>
-            <span><a href="/tabs/media.html" class="mobile-item">MEDIA</a></span>
-            <span class="mobile-item">JOIN</span>
-        </div>
+ <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+  <!-- JOIN POPUP MODAL -->
+  <div id="joinModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h3>Join Us</h3>
+      <p>Select a platform to connect:</p>
+      <div class="join-options">
+        <a href="https://chat.whatsapp.com/CcBxf6M7oRc6l3PI78hb5s" target="_blank" class="join-link whatsapp">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="join-icon">
+          WhatsApp
+        </a>
+        <a href="https://www.instagram.com/computersciencedept_bahona?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="join-link instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="join-icon">
+          Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="/image/BClogo.png" alt="Logo" class="logo">
+        <span class="brand">Bahona College</span>
+      </div>
+      <div class="nav-right">
+        <span><a href="/index.html" class="nav-item desktop">HOME</a></span>
+        <span><a href="/tabs/faculty.html" class="nav-item desktop">FACULTY</a></span>
+        <span><a href="/tabs/about.html" class="nav-item desktop">ABOUT</a></span>
+        <span><a href="/tabs/media.html" class="nav-item desktop">MEDIA</a></span>
+        <span class="nav-item desktop"><button id="joinBtn" class="join-box">JOIN</button></span>
+        <button class="menu-toggle " onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <span><a href="/index.html" class="mobile-item">HOME</a></span>
+      <span><a href="/tabs/faculty.html" class="mobile-item">FACULTY</a></span>
+      <span><a href="/tabs/about.html" class="mobile-item">ABOUT</a></span>
+      <span><a href="/tabs/media.html" class="mobile-item">MEDIA</a></span>
+      <span class="mobile-item" onclick="joinModal.style.display = 'block'">JOIN</span>
+    </div>
     </header>
     <script src="/js/script1.js"></script>
 </body>

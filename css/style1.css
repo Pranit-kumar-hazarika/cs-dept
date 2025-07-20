@@ -1,3 +1,4 @@
+/* Reset + base */
 * {
   margin: 0;
   padding: 0;
@@ -5,14 +6,138 @@
 }
 body, html {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #e2e7eb;
+  background-color: #7592beda;
   color: white;
   overflow-x: hidden;
 }
 
+/* Preloader Styles */
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212; /* or white #fff */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #00ffcc;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Loader animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.close {
+  color: #000;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.join-options {
+  margin-top: 20px;
+}
+
+.join-link {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.whatsapp {
+  background-color: #25D366;
+}
+
+.instagram {
+  background-color: #E1306C;
+}
+.join-options {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.join-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  width: 80%;
+  max-width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.join-link:hover {
+  transform: scale(1.05);
+}
+
+.join-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp {
+  background-color: #25D366;
+}
+
+.instagram {
+  background-color: #E1306C;
+}
+
+
 /* NAVIGATION BAR */
 .navbar {
-  display: flex;
+  display:flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 25px;
@@ -20,12 +145,12 @@ body, html {
   width: 90%;
   margin: 20px auto;
   border-radius: 12px;
-  position: absolute;
+  position:fixed;
   left: 0;
   right: 0;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.55);
 }
 
 .nav-left {
@@ -64,8 +189,23 @@ body, html {
 .nav-item:hover {
   color: #00ffcc;
 }
+.join-box {
+  padding: 6px 16px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.join-box:hover {
+  background-color: white;
+  color: #007bff;
+}
 
 .menu-toggle {
+  display: none;
   font-size: 24px;
   background: #b2b8df;
   color: #fff;
@@ -77,7 +217,7 @@ body, html {
 }
 
 .menu-toggle:hover {
-  background: #333;
+  background: #1da2ea;
 }
 
 /* MOBILE MENU */
@@ -87,12 +227,13 @@ body, html {
   background-color: #ffffff;
   padding: 12px 24px;
   border-radius: 0 0 12px 12px;
-  position: absolute;
+  position: fixed;
   top: 72px;
   right: 5%;
   width: 90%;
   z-index: 999;
   box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  mask-image: linear-gradient(to top ,#000000 90%,transparent );
 }
 
 .mobile-item {
@@ -100,8 +241,7 @@ body, html {
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 16px;
-  padding: 5px 0;
-  border-bottom: 1.5px solid rgba(0, 0, 0, 0.256);
+  padding: 5px ;
   display: block;
   width: 100%;
   transition: color 0.3s ease;
