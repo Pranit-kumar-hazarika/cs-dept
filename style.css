@@ -395,63 +395,53 @@ body, html {
   transition: all 0.3s ease;
 }
 
-.faculty-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: stretch;
-  transition: all 0.3s ease;
-  padding: 20px;
-}
-
-.faculty-card {
-  background: #ffffff;
-  border-radius: 12px;
+.card {
+  position: relative;
+  width: 250px;
+  height: 320px;
+  border-radius: 15px;
   overflow: hidden;
-  width: 220px;
-  text-align: center;
-  transition: transform 0.4s ease, flex 0.4s ease;
-  flex: 1;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  max-width: 240px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.faculty-card img {
+.card img {
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
 }
-
-.faculty-card:hover {
+.card:hover {
   transform: scale(1.1);
   flex: 1.3;
   z-index: 2;
 }
 
-.faculty-cards:hover .faculty-card:not(:hover) {
+.cards:hover .card:not(:hover) {
   transform: scale(0.95);
   flex: 0.9;
   opacity: 0.7;
 }
 
 .card-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   padding: 15px;
-  color: #000;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
 }
 
-.card-info h3 {
-  margin: 10px 0 5px;
-  font-size: 20px;
+.card-info .role {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 0;
 }
 
-.card-info p {
-  margin: 2px 0;
-  font-size: 16px;
-  color: #555;
+.card-info .name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0 0 0;
 }
+
 
 /* Mobile view fix */
 @media (max-width: 768px) {
@@ -481,6 +471,7 @@ body, html {
     height: auto;
   }
 }
+
 
 .footer {
   background-color: #1b3c53; /* matches your theme */
