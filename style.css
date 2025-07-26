@@ -571,13 +571,13 @@ body, html {
 }
 .media-section {
   background-color: #2779acbc;
-  padding: 60px 20px;
+  padding: 40px 20px;
   overflow: hidden;
 }
 
 .media-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 5rem;
   color: #f9f9f9;
   font-weight: bold ;
   margin-bottom: 30px;
@@ -635,11 +635,11 @@ body, html {
 @media (max-width: 768px) {
   .media-card {
     width: 180px;
-    height: 120px;
+    height: 220px;
   }
 
   .media-title {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
