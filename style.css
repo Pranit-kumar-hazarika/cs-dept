@@ -573,21 +573,47 @@ body, html {
   background-color: #2779acbc;
   padding: 40px 20px;
   overflow: hidden;
+  position: relative;
+  text-align: center;
 }
 
 .media-title {
-  text-align: center;
   font-size: 5rem;
   color: #f9f9f9;
-  font-weight: bold ;
-  margin-bottom: 30px;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
-/* Wrapper for scrolling media */
+.media-subtitle {
+  color: #ffffffcc;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* Wrapper and blur layers */
 .media-scroll-wrapper {
-  width: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+}
+
+.media-blur {
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.left-blur {
+  left: 0;
+  background: linear-gradient(to right, #2779acbc 0%, transparent 100%);
+}
+
+.right-blur {
+  right: 0;
+  background: linear-gradient(to left, #2779acc0 0%, transparent 100%);
 }
 
 /* Track that scrolls */
@@ -595,17 +621,17 @@ body, html {
   display: flex;
   gap: 20px;
   width: max-content;
-  animation: scroll-left 40s linear infinite;
+  animation: scroll-left 30s linear infinite;
 }
 
-/* Each media card */
+/* Cards */
 .media-card {
   flex: 0 0 auto;
   width: 250px;
   height: 260px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.557);
   transition: transform 0.3s ease;
 }
 
@@ -613,15 +639,14 @@ body, html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
-/* Hover effect */
 .media-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
-/* Animation for scrolling */
+/* Animation */
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
@@ -631,7 +656,7 @@ body, html {
   }
 }
 
-/* Responsive for mobile */
+/* Responsive */
 @media (max-width: 768px) {
   .media-card {
     width: 180px;
@@ -640,6 +665,14 @@ body, html {
 
   .media-title {
     font-size: 3rem;
+  }
+
+  .media-subtitle {
+    font-size: 1rem;
+  }
+
+  .media-blur {
+    width: 40px;
   }
 }
 
