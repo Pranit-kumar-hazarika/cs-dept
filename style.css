@@ -501,9 +501,11 @@ body, html {
 }
 
 .about-heading {
-  font-size: 3rem;
+  font-size: 8rem;
   margin-bottom: 20px;
+  margin-left: -180px;
   font-weight: 700;
+  word-spacing: 40px;
   letter-spacing: 2px;
   color: #ffffff;
   animation: slideInLeft 1s ease;
