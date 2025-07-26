@@ -448,11 +448,12 @@ body, html {
   .faculty-cards {
     flex-direction: column;
     align-items: center;
+    margin-left: 30px;
   }
 
   .faculty-card {
     width: 80%;
-    max-width: 320px;
+    max-width: 120px;
     transform: none !important;
     flex: none !important;
     opacity: 1 !important;
@@ -471,6 +472,7 @@ body, html {
     height: auto;
   }
 }
+
 .about-section {
   color: #fff;
   padding: 60px 20px;
