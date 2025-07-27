@@ -659,8 +659,8 @@ body, html {
 /* Responsive */
 @media (max-width: 768px) {
   .media-card {
-    width: 280px;
-    height: 320px;
+    width: 180px;
+    height: 220px;
   }
 
   .media-title {
