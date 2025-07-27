@@ -621,14 +621,14 @@ body, html {
   display: flex;
   gap: 20px;
   width: max-content;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 20s linear infinite;
 }
 
 /* Cards */
 .media-card {
   flex: 0 0 auto;
-  width: 250px;
-  height: 260px;
+  width: 350px;
+  height: 300px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.557);
@@ -659,8 +659,8 @@ body, html {
 /* Responsive */
 @media (max-width: 768px) {
   .media-card {
-    width: 180px;
-    height: 220px;
+    width: 280px;
+    height: 320px;
   }
 
   .media-title {
