@@ -42,9 +42,9 @@
       </div>
       <div class="nav-right">
         <span><a href="index.html" class="nav-item desktop">HOME</a></span>
-        <span><a href="/tabs/faculty.html" class="nav-item desktop">FACULTY</a></span>
         <span><a href="/tabs/about.html" class="nav-item desktop">ABOUT</a></span>
         <span><a href="/tabs/media.html" class="nav-item desktop">MEDIA</a></span>
+        <span><a href="/tabs/contact.html" class="nav-item desktop">CONTACT US</a></span>
         <span class="nav-item desktop"><button id="joinBtn" class="join-box">JOIN</button></span>
         <button class="menu-toggle " onclick="toggleMenu()">☰</button>
       </div>
@@ -52,9 +52,9 @@
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
       <span><a href="index.html" class="mobile-item">HOME</a></span>
-      <span><a href="/tabs/faculty.html" class="mobile-item">FACULTY</a></span>
       <span><a href="/tabs/about.html" class="mobile-item">ABOUT</a></span>
       <span><a href="/tabs/media.html" class="mobile-item">MEDIA</a></span>
+      <span><a href="/tabs/contact.html" class="mobile-item">CONTACT US</a></span>
       <span class="mobile-item" onclick="joinModal.style.display = 'block'">JOIN</span>
     </div>
     <!-- SLIDER BACKGROUND -->
@@ -65,14 +65,14 @@
       <div class="slide" style="background-image: url('image/bg4.jpg')"></div>
       <div class="overlay-left"></div>
       <div class="hero-text">
-          <h1>Bahona College</h1>
-          <h2>Computer Science Dept</h2>
-          <div class="hero-quote">
-            <p>Step into a world of possibilities—learn, explore, and grow with us as we shape the future through
-              innovation and technology.</p>
-          </div>
+        <h1>Bahona College</h1>
+        <h2>Computer Science Dept</h2>
+        <div class="hero-quote">
+          <p>Step into a world of possibilities—learn, explore, and grow with us as we shape the future through
+            innovation and technology.</p>
         </div>
       </div>
+    </div>
   </header>
   <section id="faculty-section" class="faculty-section ">
     <div class="faculty-container">
@@ -81,7 +81,7 @@
         <p>Meet our dedicated Computer Science team.</p>
       </div>
       <div class="faculty-cards hover-zoom">
-        <div class="card" >
+        <div class="card">
           <img src="image/fa1.jpg" alt="HOD">
           <div class="card-info">
             <h3>Dr. Jayanta</h3>
@@ -99,47 +99,50 @@
     </div>
   </section>
   <section class="about-section">
-  <div class="about-container">
-    <div class="about-image">
-      <img src="image/bg1.jpg" alt="About Us Image" />
+    <div class="about-container">
+      <div class="about-image">
+        <img src="image/bg1.jpg" alt="About Us Image" />
+      </div>
+      <div class="about-content">
+        <h2 class="about-heading">ABOUT US</h2>
+        <p class="about-text">
+          The Department of Computer Science, Bahona College (est. 2023), is dedicated to nurturing tech-savvy minds
+          through a 4-year B.Sc. program under Dibrugarh University. With modern ICT-enabled classrooms, air-conditioned
+          labs, and a focus on programming, OS, and hardware, we empower students for high-demand careers.
+        <p class="about-text">
+          We promote hands-on learning through internships, seminars, field trips, and more—guided by friendly faculty
+          in a dynamic, future-ready environment.
+        </p>
+      </div>
     </div>
-    <div class="about-content">
-      <h2 class="about-heading">ABOUT US</h2>
-      <p class="about-text">
-        The Department of Computer Science, Bahona College (est. 2023), is dedicated to nurturing tech-savvy minds through a 4-year B.Sc. program under Dibrugarh University. With modern ICT-enabled classrooms, air-conditioned labs, and a focus on programming, OS, and hardware, we empower students for high-demand careers.
-      <p class="about-text">
-        We promote hands-on learning through internships, seminars, field trips, and more—guided by friendly faculty in a dynamic, future-ready environment.
-      </p>
+  </section>
+
+  <section id="media-section" class="media-section">
+    <h2 class="media-title">MEDIA</h2>
+    <p class="media-subtitle">Our Moments, Memories & More</p>
+
+    <div class="media-scroll-wrapper">
+      <!-- Blur overlays -->
+      <div class="media-blur left-blur"></div>
+      <div class="media-blur right-blur"></div>
+
+      <!-- Scrolling images -->
+      <div class="media-scroll-track">
+        <div class="media-card"><img src="/image/bg1.jpg" alt="Media 1"></div>
+        <div class="media-card"><img src="/image/bg2.jpg" alt="Media 2"></div>
+        <div class="media-card"><img src="/image/bg3.jpg" alt="Media 3"></div>
+        <div class="media-card"><img src="/image/bg4.jpg" alt="Media 4"></div>
+        <div class="media-card"><img src="/image/bg5.jpg" alt="Media 5"></div>
+
+        <!-- Repeat for seamless loop -->
+        <div class="media-card"><img src="/image/bg1.jpg" alt="Media 1"></div>
+        <div class="media-card"><img src="/image/bg2.jpg" alt="Media 2"></div>
+        <div class="media-card"><img src="/image/bg3.jpg" alt="Media 3"></div>
+        <div class="media-card"><img src="/image/bg4.jpg" alt="Media 4"></div>
+        <div class="media-card"><img src="/image/bg5.jpg" alt="Media 5"></div>
+      </div>
     </div>
-  </div>
-</section>
-
-<section id="media-section" class="media-section">
-  <h2 class="media-title">MEDIA</h2>
-  <p class="media-subtitle">Our Moments, Memories & More</p>
-
-  <div class="media-scroll-wrapper">
-    <!-- Blur overlays -->
-    <div class="media-blur left-blur"></div>
-    <div class="media-blur right-blur"></div>
-
-    <!-- Scrolling images -->
-    <div class="media-scroll-track">
-      <div class="media-card"><img src="/image/bg1.jpg" alt="Media 1"></div>
-      <div class="media-card"><img src="/image/bg2.jpg" alt="Media 2"></div>
-      <div class="media-card"><img src="/image/bg3.jpg" alt="Media 3"></div>
-      <div class="media-card"><img src="/image/bg4.jpg" alt="Media 4"></div>
-      <div class="media-card"><img src="/image/bg5.jpg" alt="Media 5"></div>
-
-      <!-- Repeat for seamless loop -->
-      <div class="media-card"><img src="/image/bg1.jpg" alt="Media 1"></div>
-      <div class="media-card"><img src="/image/bg2.jpg" alt="Media 2"></div>
-      <div class="media-card"><img src="/image/bg3.jpg" alt="Media 3"></div>
-      <div class="media-card"><img src="/image/bg4.jpg" alt="Media 4"></div>
-      <div class="media-card"><img src="/image/bg5.jpg" alt="Media 5"></div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
