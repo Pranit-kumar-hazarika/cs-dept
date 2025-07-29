@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>faculty</title>
-  <link rel="stylesheet" href="/css/style1.css">
+  <link rel="stylesheet" href="/css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -58,6 +59,50 @@
       <span class="mobile-item" onclick="joinModal.style.display = 'block'">JOIN</span>
     </div>
   </header>
+  <main class="contact-page">
+    <section class="contact-hero">
+      <h1>Contact Us</h1>
+      <p>Home / Contact</p>
+    </section>
+
+    <section class="contact-body">
+      <div class="contact-form-box">
+        <h2>Contact Us</h2>
+        <h3>Get In Touch</h3>
+        <form id="contactForm" method="POST">
+          <input type="text" name="name" placeholder="Your Name..." required>
+          <input type="email" name="email" placeholder="example@yourmail.com" required>
+          <input type="text" name="subject" placeholder="Title..." required>
+          <textarea name="message" placeholder="Type Here..." rows="5" required></textarea>
+
+          <!-- Hidden inputs -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+
+          <button type="submit">Send Now</button>
+        </form>
+        <div id="formMessage"></div>
+      </div>
+
+      <div class="contact-info-box">
+        <p>Feel free to reach out to us for any queries related to the Computer Science Department. We’re always happy
+          to help!</p>
+        <p><i class="fas fa-phone"></i> +91 91234 56789</p>
+        <p><i class="fas fa-envelope"></i> csdept@bahonacollege.edu.in</p>
+        <p><i class="fab fa-whatsapp"></i> 082-245-7253</p>
+        <p><i class="fas fa-map-marker-alt"></i> Bahona College, Jorhat, Assam 785101</p>
+        <div class="map-box">
+          <iframe src="https://maps.google.com/maps?q=Bahona%20College&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-cta">
+      <h2>We Are Always Ready To Take A Perfect Step</h2>
+    </section>
+  </main>
+
   <footer class="cs-footer">
     <div class="cs-footer-container">
       <div class="cs-footer-left">
@@ -89,7 +134,7 @@
     </div>
   </footer>
 
-  <script src="/js/script1.js"></script>
+  <script src="/js/contact.js"></script>
 </body>
 
 </html>
