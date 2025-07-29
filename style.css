@@ -675,39 +675,90 @@ body, html {
 }
 
 
-.footer {
-  background-color: #1b3c53; /* matches your theme */
-  color: #f9f3ef;
-  padding: 20px 0;
-  margin-top: 10px;
-  text-align: center;
+.cs-footer {
+  background-color: #121212;
+  color: #f0f0f0;
+  padding: 50px 20px 20px;
   font-family: 'Segoe UI', sans-serif;
 }
 
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.cs-footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-.footer-title {
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
+.cs-footer-left,
+.cs-footer-links,
+.cs-footer-contact {
+  flex: 1 1 250px;
 }
 
-.footer-links {
-  margin-top: 10px;
+.cs-footer-logo {
+  width: 150px;
+  margin-bottom: 15px;
 }
 
-.footer-links a {
-  color: #f9f3ef;
-  text-decoration: none;
-  margin: 0 10px;
+.cs-footer-left p {
+  margin-bottom: 20px;
   font-size: 14px;
+  color: #ccc;
+}
+
+.cs-social-icons a {
+  margin-right: 10px;
+  color: #ccc;
+  font-size: 18px;
   transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
-  color: #d2c1b6; /* slight hover effect */
+.cs-social-icons a:hover {
+  color: #ffffff;
 }
+
+.cs-footer-links h3,
+.cs-footer-contact h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.cs-footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cs-footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.cs-footer-links ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.cs-footer-links ul li a:hover {
+  color: #fff;
+}
+
+.cs-footer-contact p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.cs-footer-contact i {
+  margin-right: 8px;
+  color: #777;
+}
+
+.cs-footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #333;
+  font-size: 13px;
+  color: #777;
+}
+
