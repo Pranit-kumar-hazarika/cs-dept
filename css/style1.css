@@ -285,12 +285,11 @@ html {
 
 .gallery-section {
   padding: 60px 20px ;
-  margin: 80px 30px auto;
+  margin: 90px 30px auto;
   border-radius: 12px;
   background: #2779acbc;
   color: white;
 }
-
 
 .gallery-container {
   max-width: 1400px;
@@ -390,7 +389,7 @@ html {
 /* Responsive image sizing */
 @media (max-width: 768px) {
   .gallery-image {
-    height: 180px;
+    height: 280px;
   }
 }
 
