@@ -33,4 +33,23 @@ function toggleMenu() {
     }, 500);
   });
 
-  
+  function toggleImages() {
+    const allImages = document.querySelectorAll('.gallery-container .gallery-image');
+    const button = document.querySelector('.show-more-btn');
+
+    const isExpanded = button.getAttribute('data-expanded') === 'true';
+
+    if (isExpanded) {
+      // Hide extra images (show only first 6 for example)
+      allImages.forEach((img, index) => {
+        img.classList.toggle('hidden', index >= 6); // hide images after 6th
+      });
+      button.textContent = "Show More";
+      button.setAttribute('data-expanded', 'false');
+    } else {
+      // Show all images
+      allImages.forEach(img => img.classList.remove('hidden'));
+      button.textContent = "Show Less";
+      button.setAttribute('data-expanded', 'true');
+    }
+  }
