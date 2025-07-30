@@ -4,7 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-body, html {
+
+body,
+html {
   font-family: 'Segoe UI', sans-serif;
   background-color: #1f2123da;
   color: white;
@@ -18,7 +20,8 @@ body, html {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #121212; /* or white #fff */
+  background-color: #121212;
+  /* or white #fff */
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -36,9 +39,15 @@ body, html {
 
 /* Loader animation */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
 /* Modal Styles */
 .modal {
   display: none;
@@ -49,7 +58,7 @@ body, html {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-content {
@@ -93,6 +102,7 @@ body, html {
 .instagram {
   background-color: #E1306C;
 }
+
 .join-options {
   margin-top: 20px;
   display: flex;
@@ -137,7 +147,7 @@ body, html {
 
 /* NAVIGATION BAR */
 .navbar {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 25px;
@@ -145,7 +155,7 @@ body, html {
   width: 90%;
   margin: 20px auto;
   border-radius: 12px;
-  position:fixed;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -189,6 +199,7 @@ body, html {
 .nav-item:hover {
   color: #00ffcc;
 }
+
 .join-box {
   padding: 6px 16px;
   border: 2px solid white;
@@ -232,8 +243,8 @@ body, html {
   right: 5%;
   width: 90%;
   z-index: 999;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
-  mask-image: linear-gradient(to top ,#000000 90%,transparent );
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  mask-image: linear-gradient(to top, #000000 90%, transparent);
 }
 
 .mobile-item {
@@ -241,7 +252,7 @@ body, html {
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 16px;
-  padding: 5px ;
+  padding: 5px;
   display: block;
   width: 100%;
   transition: color 0.3s ease;
@@ -260,6 +271,7 @@ body, html {
   .nav-item.desktop {
     display: none;
   }
+
   .menu-toggle {
     display: block;
   }
@@ -273,7 +285,8 @@ body, html {
 
 .gallery-section {
   width: 100%;
-  padding: 80px 10px 40px; /* Top padding for navbar spacing */
+  padding: 80px 10px 40px;
+  /* Top padding for navbar spacing */
   background: #2779acbc;
   color: white;
   border-radius: 0;
@@ -317,12 +330,12 @@ body, html {
   object-fit: cover;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .gallery-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 .show-more-btn {
@@ -336,6 +349,7 @@ body, html {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 .show-more-wrapper {
   display: flex;
   justify-content: center;
@@ -360,7 +374,60 @@ body, html {
 
 @media (max-width: 480px) {
   .gallery-image {
-    height: 140px;
+    height: 240px;
+ 
+  }
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-img {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+@media(max-width: 600px) {
+  .gallery-title {
+    font-size: 2rem;
+  }
+
+  .lightbox-img {
+    margin-top: 260px;
+    max-width: 95%;
+    max-height: 75vh;
+  }
+    .close {
+    top: 240px;
+    right: 20px;
+    font-size: 30px;
+  }
+  .show-more-btn {
+    width: 90%;
   }
 }
 

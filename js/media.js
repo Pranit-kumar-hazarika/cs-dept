@@ -53,3 +53,24 @@ function toggleMenu() {
       button.setAttribute('data-expanded', 'true');
     }
   }
+
+   // Lightbox functionality
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+
+  document.querySelectorAll('.gallery-image').forEach(image => {
+    image.addEventListener('click', () => {
+      lightboxImg.src = image.src;
+      lightbox.style.display = "block";
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.style.display = "none";
+  }
+
+  window.addEventListener('click', (e) => {
+    if (e.target == lightbox) {
+      closeLightbox();
+    }
+  });
