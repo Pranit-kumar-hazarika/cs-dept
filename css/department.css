@@ -12,9 +12,6 @@ body, html {
   overflow-x: hidden;
 }
 
-/* Navbar is inherited from style1.css */
-
-/* Tabs */
 .tab-header {
   display: flex;
   justify-content: center;
