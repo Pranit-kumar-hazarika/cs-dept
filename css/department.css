@@ -515,8 +515,8 @@ body, html {
   }
 
   .faculty-slide img {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 120px;
   }
 
   .slide-image {
@@ -531,5 +531,11 @@ body, html {
   .reference-box img {
     width: 50px;
     height: 50px;
+  }
+  .slideshow-container {
+    height: 300px;
+  }
+  .slide-image {
+    height: 300px;
   }
 }
