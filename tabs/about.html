@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About</title>
   <link rel="stylesheet" href="/css/style1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/css/department.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
   <!-- Preloader -->
@@ -48,6 +49,288 @@
         <button class="menu-toggle " onclick="toggleMenu()">☰</button>
       </div>
     </nav>
+<!-- Tab Selector -->
+<section class="custom-tab-selector">
+  <div class="tab-pill-container">
+    <button class="pill-tab active" onclick="openDeptTab('faculty')">Faculty</button>
+    <button class="pill-tab" onclick="openDeptTab('students')">Students</button>
+    <button class="pill-tab" onclick="openDeptTab('about')">About Us</button>
+    <span class="pill-highlight" id="tabHighlighter"></span>
+  </div>
+</section>
+
+<!-- Faculty Section -->
+<section class="tab-content-section" id="faculty">
+  <div class="faculty-slider">
+    <div class="faculty-slide" onclick="showProfessor('jayanta')">
+      <img src="/image/fa1.jpg" alt="Dr. Jayanta Bordoloi" />
+      <div class="slide-name">Dr. Jayanta Bordoloi</div>
+    </div>
+    <div class="faculty-slide" onclick="showProfessor('somi')">
+      <img src="/image/fa2.jpg" alt="Dr. Somi Kolita" />
+      <div class="slide-name">Dr. Somi Kolita</div>
+    </div>
+    <div class="faculty-slide" onclick="showProfessor('new')">
+      <img src="/image/fa2.jpg" alt="Dr. Somi Kolita" />
+      <div class="slide-name">Dr. Somi Kolita</div>
+    </div>
+  </div>
+
+  <!-- Dr. Jayanta Profile -->
+  <div class="faculty-info-box active" id="prof-jayanta">
+    <div class="faculty-full-grid">
+      <div class="profile-box dark">
+        <h2>Dr. Jayanta Bordoloi</h2>
+        <p>Head of Department</p>
+      </div>
+      <div class="profile-box stat-box">  
+        <div><h4>4</h4><p1>Courses</p1></div>
+        <div><h4>12</h4><p1>Years</p1></div>
+        <div><h4>5</h4><p1>Projects</p1></div>
+      </div>
+      <div class="profile-box quote-box">
+        <p>"The artist, the freelancer and the creator, we know that the privilege of doing the extra work is the work itself."</p>
+        <span>— Seth Godin</span>
+      </div>
+      <div class="extra-box message-box">
+        <h3>Message to Students</h3>
+        <p>"Learning is not attained by chance, it must be sought for with ardor and attended to with diligence."</p>
+      </div>
+      <div class="profile-box message-box">
+        <p>Dr. Jayanta Bordoloi is a passionate academician with a strong background in computer science and statistics. With over a decade of teaching and research experience, he has guided numerous students through their academic journeys and continues to push the envelope in digital education and departmental innovation.</p>
+      </div>
+      <div class="profile-box reference-box message-box">
+        <img src="/image/fa2.jpg" alt="Dr. Somi Kolita" />
+        <div>
+          <h4>Dr. Somi Kolita</h4>
+          <p>Assistant Professor</p>
+          <p>“Working with Dr. Jayanta has elevated our department’s academic depth.”</p>
+        </div>
+      </div>
+      <div class="extra-box">
+        <h3>Research Interests</h3>
+        <ul>
+          <li>AI & Machine Learning</li>
+          <li>Data Analytics</li>
+          <li>Educational Tech</li>
+        </ul>
+      </div>
+      <div class="extra-box">
+        <h3>Roles & Recognition</h3>
+        <ul>
+          <li>UGC Research Grant Recipient</li>
+          <li>National Reviewer (AICTE)</li>
+          <li>Faculty Mentor (Coding Club)</li>
+        </ul>
+      </div>
+      <div class="extra-box">
+        <h3>Memberships</h3>
+        <ul>
+          <li>CSI Member</li>
+          <li>IEEE Education Society</li>
+          <li>NAAC Committee</li>
+        </ul>
+      </div>
+      <div class="extra-box slideshow-box work-highlight-box">
+        <h3>Work Highlights</h3>
+        <div class="slideshow-container">
+          <img class="slide-image active" src="/image/fa1.jpg" alt="Slide 1" />
+          <img class="slide-image" src="/image/fa2.jpg" alt="Slide 2" />
+          <img class="slide-image" src="/image/fa1.jpg" alt="Slide 3" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dr. Somi Profile -->
+  <div class="faculty-info-box" id="prof-somi">
+    <div class="faculty-full-grid">
+      <div class="profile-box dark">
+        <h2>Dr. Somi Kolita</h2>
+        <p>Assistant Professor</p>
+      </div>
+      <div class="profile-box stat-box">
+        <div><h4>3</h4><p1>Courses</p1></div>
+        <div><h4>10</h4><p1>Years</p1></div>
+        <div><h4>4</h4><p1>Projects</p1></div>
+      </div>
+      <div class="profile-box quote-box">
+        <p>"Teaching is the one profession that creates all other professions."</p>
+        <span>— Anonymous</span>
+      </div>
+      <div class="extra-box message-box">
+        <h3>Message to Students</h3>
+        <p>“Every line of code is a step toward building something bigger than yourself — keep stepping.”</p>
+      </div>
+      <div class="profile-box message-box">
+        <p>Dr. Somi Kolita has over a decade of experience in research and education. With a PhD in Computer Science, her innovative approach to curriculum development and mentorship continues to inspire the students of Bahona College.</p>
+      </div>
+      <div class="profile-box reference-box message-box">
+        <img src="/image/fa1.jpg" alt="Dr. Jayanta Bordoloi" />
+        <div>
+          <h4>Dr. Jayanta Bordoloi</h4>
+          <p>Head of Department</p>
+          <p>“Somi brings academic rigor and warmth that makes students thrive.”</p>
+        </div>
+      </div>
+
+      <div class="extra-box">
+        <h3>Research Interests</h3>
+        <ul>
+          <li>Natural Language Processing</li>
+          <li>Gender & Tech Inclusion</li>
+          <li>Cybersecurity Education</li>
+        </ul>
+      </div>
+      <div class="extra-box">
+        <h3>Roles & Recognition</h3>
+        <ul>
+          <li>Keynote at EduCon 2023</li>
+          <li>UGC Research Grant Winner</li>
+          <li>Faculty Mentor, Girls in Tech</li>
+        </ul>
+      </div>
+      <div class="extra-box">
+        <h3>Professional Memberships</h3>
+        <ul>
+          <li>ACM-W India</li>
+          <li>International Women's Tech Forum</li>
+          <li>NAAC Advisory Cell</li>
+        </ul>
+      </div>
+      <div class="extra-box slideshow-box work-highlight-box">
+        <h3>Work Highlights</h3>
+        <div class="slideshow-container">
+          <img class="slide-image active" src="/image/fa1.jpg" alt="Slide 1" />
+          <img class="slide-image" src="/image/fa2.jpg" alt="Slide 2" />
+          <img class="slide-image" src="/image/fa1.jpg" alt="Slide 3" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dr. new Profile -->
+  <div class="faculty-info-box" id="prof-new">
+    <div class="faculty-full-grid">
+      <div class="profile-box dark">
+        <h2>Dr. Somi Kolita</h2>
+        <p>Assistant Professor</p>
+      </div>
+      <div class="profile-box stat-box">
+        <div><h4>3</h4><p1>Courses</p1></div>
+        <div><h4>10</h4><p1>Years</p1></div>
+        <div><h4>4</h4><p1>Projects</p1></div>
+      </div>
+      <div class="profile-box quote-box">
+        <p>"Teaching is the one profession that creates all other professions."</p>
+        <span>— Anonymous</span>
+      </div>
+      <div class="extra-box message-box">
+        <h3>Message to Students</h3>
+        <p>“Every line of code is a step toward building something bigger than yourself — keep stepping.”</p>
+      </div>
+      <div class="profile-box message-box">
+        <p>Dr. Somi Kolita has over a decade of experience in research and education. With a PhD in Computer Science, her innovative approach to curriculum development and mentorship continues to inspire the students of Bahona College.</p>
+      </div>
+      <div class="profile-box reference-box message-box">
+        <img src="/image/fa1.jpg" alt="Dr. Jayanta Bordoloi" />
+        <div>
+          <h4>Dr. Jayanta Bordoloi</h4>
+          <p>Head of Department</p>
+          <p>“Somi brings academic rigor and warmth that makes students thrive.”</p>
+        </div>
+      </div>
+      <div class="extra-box">
+        <h3>Research Interests</h3>
+        <ul>
+          <li>Natural Language Processing</li>
+          <li>Gender & Tech Inclusion</li>
+          <li>Cybersecurity Education</li>
+        </ul>
+      </div>
+      <div class="extra-box">
+        <h3>Roles & Recognition</h3>
+        <ul>
+          <li>Keynote at EduCon 2023</li>
+          <li>UGC Research Grant Winner</li>
+          <li>Faculty Mentor, Girls in Tech</li>
+        </ul>
+      </div>
+      <div class="extra-box">
+        <h3>Professional Memberships</h3>
+        <ul>
+          <li>ACM-W India</li>
+          <li>International Women's Tech Forum</li>
+          <li>NAAC Advisory Cell</li>
+        </ul>
+      </div>
+      <div class="extra-box slideshow-box work-highlight-box">
+        <h3>Work Highlights</h3>
+        <div class="slideshow-container">
+          <img class="slide-image active" src="/image/fa1.jpg" alt="Slide 1" />
+          <img class="slide-image" src="/image/fa2.jpg" alt="Slide 2" />
+          <img class="slide-image" src="/image/fa1.jpg" alt="Slide 3" />
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Students Section -->
+<section id="students" class="tab-content-section">
+  <div class="students-list">
+    <div class="student-entry">
+      <img src="/image/s1.png" alt="Pranit Hazarika" class="student-photo" />
+      <div class="student-info">
+        <h3>Pranit Hazarika</h3>
+        <p>Semester III</p>
+        <p>Site-Developer</p>
+      </div>
+    </div>
+    <div class="student-entry">
+      <img src="/image/s2.jpg" alt="Parashmoni" class="student-photo" />
+      <div class="student-info">
+        <h3>Parashmoni Dutta</h3>
+        <p>Semester V</p>
+      </div>
+    </div>
+    <div class="student-entry">
+      <img src="/image/s3.jpg" alt="P" class="student-photo" />
+      <div class="student-info">
+        <h3>Prachurya Pachani</h3>
+        <p>Semester V</p>
+      </div>
+    </div>
+  <!-- Add more students here -->
+  </div>
+</section>
+
+<!-- about test -->
+<section id="about" class="about-section">
+  <div class="about-grid">
+    <div class="about-block">
+      <h2>About Our Department</h2>
+      <p>
+        The Department of Computer Science at Bahona College is committed to excellence in education, research, and innovation.
+      </p>
+    </div>
+
+    <div class="about-block">
+      <h2>Our Vision</h2>
+      <p>
+        We aim to empower students with modern computing skills and a mindset for solving real-world problems, fostering leaders of tomorrow.
+      </p>
+    </div>
+
+    <div class="about-block">
+      <h2>Why Choose Us?</h2>
+      <p>
+        Experienced faculty, hands-on learning, strong academic foundation, and a student-first culture make our department unique.
+      </p>
+    </div>
+  </div>
+</section>
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
       <span><a href="/index.html" class="mobile-item">HOME</a></span>
@@ -70,12 +353,15 @@
         </div>
       </div>
 
-      <div class="cs-footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="/tabs/contact.html">Contact us</a></li>
-        </ul>
-      </div>
+    <div class="cs-footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#faculty">Faculty</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="/tabs/media.html">Media</a></li>
+      </ul>
+    </div>
 
       <div class="cs-footer-contact">
         <h3>Contact Info</h3>
@@ -89,7 +375,6 @@
     </div>
   </footer>
 
-  <script src="/js/script1.js"></script>
+<script src="/js/script1.js"></script>
 </body>
-
 </html>
