@@ -700,6 +700,7 @@ html {
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  flex-wrap: wrap; 
 }
 
 .notice-box,
@@ -709,9 +710,6 @@ html {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 45%;
-  opacity: 0;
-  transform: translateY(50px);
-  animation: slideUp 0.8s ease-in-out forwards;
 }
 
 h2 {
@@ -746,14 +744,13 @@ h2 {
   color: #e88024;
 }
 
-/* Animation */
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notice-box,
+  .links-box {
+    width: 90%; /* Full width on smaller screens */
   }
 }
-
 
 .cs-footer {
   background-color: #121212;
