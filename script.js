@@ -25,7 +25,7 @@ setInterval(() => {
   slides.forEach(slide => slide.classList.remove('active'));
   index = (index + 1) % slides.length;
   slides[index].classList.add('active');
-}, 3000);
+}, 3500);
 function toggleMenu() {
   const menu = document.getElementById('mobileMenu');
   menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
