@@ -684,19 +684,19 @@ html {
   border-radius: 50%;
   object-fit: cover;
   margin-right: 1.5rem;
-  border: 3px solid #e0e6f0;
+  border: 3px solid #596372;
 }
 
 .student-details h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: #113366;
+  color: #000000;
 }
 
 .student-details p {
   margin: 0.2rem 0 0;
   font-size: 1rem;
-  color: #444;
+  color: #000000;
 }
 
 /* Fade-in Animation & Stagger */
