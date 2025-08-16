@@ -960,4 +960,12 @@ h4 {
   color: #d2c1b6;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .dev-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 

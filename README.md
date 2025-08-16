@@ -14,12 +14,4 @@ This is a dynamic and responsive **Computer Science Department website** designe
 
 ---
 
-##  Demo & Setup
-
-1. Clone the repo:
-
-   ```bash
-   git clone https://github.com/Pranit-kumar-hazarika/cs-dept.git
-   cd cs-dept
-   
 *— Pranit Kumar Hazarika*
