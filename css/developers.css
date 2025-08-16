@@ -305,7 +305,7 @@ html {
 
 .dev-social a {
   margin: 0 8px;
-  font-size: 22px;
+  font-size: 35px;
   color: #2b1d0e;
   transition: color 0.3s;
 }
@@ -349,7 +349,7 @@ html {
 .cs-social-icons a {
   margin-right: 10px;
   color: #ccc;
-  font-size: 18px;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
