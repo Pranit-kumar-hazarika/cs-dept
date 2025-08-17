@@ -1,18 +1,16 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body,
-html {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #282424da;
-  color: white;
-  overflow-x: hidden;
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
 }
-
-
 /* Modal Styles */
 .modal {
   display: none;
@@ -246,76 +244,105 @@ html {
   }
 }
 
-
-/* Developers Section */
-.dev-container {
+/* Hero */
+.hero {
   text-align: center;
-  width: 100%;
   padding: 80px 20px;
+  background: linear-gradient(to right, #0d0d0d, #1a1a1a);
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero p {
+  color: #bbb;
 }
 
-.dev-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 60px;
-  color: #ffffff;
+/* Developers */
+.developers {
+  text-align: center;
+  padding: 60px 10%;
+}
+.developers h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
 }
 
-.dev-cards {
-  display: flex;
-  justify-content: center;
+.dev-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  flex-wrap: wrap;
 }
 
 .dev-card {
-  background: #f6f6f6;
-  border-radius: 20px;
-  box-shadow: 0px 6px 15px rgba(246, 246, 246, 0.204);
-  width: 280px;
-  padding: 30px 20px;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
   text-align: center;
   transition: transform 0.3s;
 }
-
 .dev-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
 }
-
 .dev-card img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
-  border: 3px solid #ffffff00;
+  border: 3px solid #ff4c29;
 }
-
 .dev-card h3 {
-  margin: 10px 0 5px;
-  font-size: 1.4rem;
-  color: #2b1d0e;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
-
 .dev-card p {
-  font-size: 15px;
-  color: #5a4633;
+  color: #aaa;
+  font-size: 0.95rem;
   margin-bottom: 15px;
-  line-height: 1.4;
 }
-
-.dev-social a {
+.social-links a {
   margin: 0 8px;
-  font-size: 35px;
-  color: #2b1d0e;
+  font-size: 1.2rem;
+  color: #ff4c29;
   transition: color 0.3s;
 }
+.social-links a:hover {
+  color: #fff;
+}
 
-.dev-social a:hover {
-  color: #5c4027;
+/* CTA */
+.cta {
+  background: #111;
+  text-align: center;
+  padding: 60px 20px;
+}
+.cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.cta span {
+  color: #ff4c29;
+  font-style: italic;
+}
+.cta-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #ff4c29;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.cta-btn:hover {
+  background: #e84321;
 }
 
 /* Footer */
 .cs-footer {
+  position: absolute;
+  width: 100%;
   background-color: #121212;
   color: #f0f0f0;
   padding: 50px 20px 20px;
@@ -349,7 +376,7 @@ html {
 .cs-social-icons a {
   margin-right: 10px;
   color: #ccc;
-  font-size: 20px;
+  font-size: 18px;
   transition: color 0.3s ease;
 }
 
@@ -401,14 +428,12 @@ html {
   font-size: 13px;
   color: #777;
 }
-
 .cs-footer-bottom a {
   color: #f9f3ef;
   text-decoration: none;
   margin-left: 5px;
   transition: color 0.3s;
 }
-
 .cs-footer-bottom a:hover {
   color: #d2c1b6;
 }
