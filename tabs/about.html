@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Bahona College CS Dept</title>
   <link rel="stylesheet" href="/css/about.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -23,15 +22,12 @@
       <h3>Join Us</h3>
       <p>Select a platform to connect:</p>
       <div class="join-options">
-        <a href="https://chat.whatsapp.com/CcBxf6M7oRc6l3PI78hb5s" target="_blank"
-          class="join-link whatsapp">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"
-            class="join-icon"> WhatsApp
+        <a href="https://chat.whatsapp.com/CcBxf6M7oRc6l3PI78hb5s" target="_blank" class="join-link whatsapp">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="join-icon"> WhatsApp
         </a>
-        <a href="https://www.instagram.com/computersciencedept_bahona" target="_blank"
-          class="join-link instagram">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
-            class="join-icon"> Instagram
+        <a href="https://www.instagram.com/computersciencedept_bahona" target="_blank" class="join-link instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="join-icon">
+          Instagram
         </a>
       </div>
     </div>
@@ -65,38 +61,77 @@
     </div>
   </header>
 
-  <!-- Faculty Section -->
-  <section id="faculty-section" class="faculty-section">
-    <div class="faculty-container">
-      <div class="faculty-heading">
-        <h2>Our Faculty</h2>
-        <p>Meet our dedicated Computer Science team.</p>
+
+<!-- Faculty Section -->
+<section id="faculty-section" class="faculty-section">
+  <div class="faculty-container">
+    <div class="faculty-heading">
+      <h2>Our Faculty</h2>
+      <p>Meet our dedicated Computer Science team.</p>
+    </div>
+
+    <div class="faculty-cards">
+      <!-- Card 1 -->
+      <div class="faculty-card" onclick="openProfile('jayanta')">
+        <img src="/image/fa1.jpg" alt="Dr. Jayanta">
+        <h3>Dr. Jayanta</h3>
+        <p>HOD</p>
       </div>
-      <div class="faculty-cards hover-zoom">
-        <div class="card">
-          <img src="/image/fa1.jpg" alt="HOD">
-          <div class="card-info">
-            <h3>Dr. Jayanta</h3>
-            <p>HOD</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="/image/fa2.jpg" alt="Sumi Madam">
-          <div class="card-info">
-            <h3>Dr. Sumi</h3>
-            <p>Assistant Professor</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="/image/fa3.png" alt="">
-          <div class="card-info">
-            <h3>Biki Dutta</h3>
-            <p>Professor</p>
-          </div>
-        </div>
+
+      <!-- Card 2 -->
+      <div class="faculty-card" onclick="openProfile('sumi')">
+        <img src="/image/fa2.jpg" alt="Prof. Sumi">
+        <h3>Prof. Sumi</h3>
+        <p>Assistant Professor</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="faculty-card" onclick="openProfile('biki')">
+        <img src="/image/fa3.png" alt="Biki Dutta">
+        <h3>Prof. Biki Dutta</h3>
+        <p>Professor</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Faculty Profile Modals -->
+<div id="jayanta" class="profile-modal">
+  <div class="profile-content">
+    <span class="close" onclick="closeProfile('jayanta')">&times;</span>
+    <img src="/image/fa1.jpg" alt="Dr. Jayanta">
+    <h2>Dr. Jayanta</h2>
+    <p><strong>Designation:</strong> HOD</p>
+    <p><strong>Expertise:</strong> Artificial Intelligence, Machine Learning</p>
+    <p><strong>Qualification:</strong> PhD in Computer Science</p>
+    <p><strong>Email:</strong> jayanta@bahonacollege.edu.in</p>
+  </div>
+</div>
+
+<div id="sumi" class="profile-modal">
+  <div class="profile-content">
+    <span class="close" onclick="closeProfile('sumi')">&times;</span>
+    <img src="/image/fa2.jpg" alt="Dr. Sumi">
+    <h2>Dr. Sumi</h2>
+    <p><strong>Designation:</strong> Assistant Professor</p>
+    <p><strong>Expertise:</strong> Data Science, Operating Systems</p>
+    <p><strong>Qualification:</strong> PhD in Computer Applications</p>
+    <p><strong>Email:</strong> sumi@bahonacollege.edu.in</p>
+  </div>
+</div>
+
+<div id="biki" class="profile-modal">
+  <div class="profile-content">
+    <span class="close" onclick="closeProfile('biki')">&times;</span>
+    <img src="/image/fa3.png" alt="Biki Dutta">
+    <h2>Biki Dutta</h2>
+    <p><strong>Designation:</strong> Professor</p>
+    <p><strong>Expertise:</strong> Networking, System Design</p>
+    <p><strong>Qualification:</strong> M.Sc. Computer Science</p>
+    <p><strong>Email:</strong> biki@bahonacollege.edu.in</p>
+  </div>
+</div>
+
 
   <!-- Students Section -->
   <section id="students-section" class="students-section">

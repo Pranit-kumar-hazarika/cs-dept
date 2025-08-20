@@ -220,34 +220,83 @@
 }
 
 .faculty-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 30px;
 }
 
-.faculty-cards .card {
-    width: 220px;
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+.faculty-card {
+  width: 200px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.faculty-card:hover {
+  transform: translateY(-6px);
+}
+.faculty-card img {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.faculty-card h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #222;
+}
+.faculty-card p {
+  color: #666;
+  font-size: 0.9rem;
 }
 
-.faculty-cards .card:hover {
-    transform: translateY(-6px);
+/* Profile Modal */
+.profile-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
 }
-
-.faculty-cards img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+.profile-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
-
-.card-info {
-    padding: 15px;
+.profile-content img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.profile-content h2 {
+  margin-bottom: 10px;
+}
+.profile-content p {
+  margin: 6px 0;
+  color: #444;
+}
+.profile-modal .close {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* Students Section */

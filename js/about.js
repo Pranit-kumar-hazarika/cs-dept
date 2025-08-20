@@ -18,3 +18,11 @@ closeModal.onclick = () => joinModal.style.display = "none";
 window.onclick = (event) => {
   if (event.target === joinModal) joinModal.style.display = "none";
 };
+
+function openProfile(id) {
+  document.getElementById(id).style.display = "flex";
+}
+
+function closeProfile(id) {
+  document.getElementById(id).style.display = "none";
+}
