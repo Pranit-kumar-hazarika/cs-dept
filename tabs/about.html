@@ -2,392 +2,366 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
-  <link rel="stylesheet" href="/css/department.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Computer Science Department</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ===== Global Styles ===== */
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f6fa;
+      color: #333;
+    }
+
+    h2,
+    h3 {
+      margin: 10px 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    /* ===== Tabs ===== */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0 40px;
+    }
+
+    .tab-btn {
+      position: relative;
+      padding: 12px 25px;
+      border: none;
+      background: linear-gradient(45deg, #0077ff, #00d4ff);
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tab-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 119, 255, 0.4);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(45deg, #00d4ff, #0077ff);
+    }
+
+    /* ===== Tab Content Animations ===== */
+    .tab-content {
+      display: none;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== Faculty Section ===== */
+    .faculty-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .faculty-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .faculty-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 119, 255, 0.3);
+    }
+
+    .faculty-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 4px solid #0077ff20;
+    }
+
+    .faculty-card h3 {
+      color: #0077ff;
+    }
+
+    .faculty-card p.quote {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* ===== Student Section (List Style) ===== */
+    .student-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .student-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .student-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 119, 255, 0.3);
+    }
+
+    .student-item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #0077ff30;
+    }
+
+    /* ===== Projects ===== */
+    .projects {
+      margin: 30px 0;
+    }
+
+    .project-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: linear-gradient(45deg, #0077ff, #00d4ff);
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 119, 255, 0.4);
+    }
+
+    /* ===== Group Pictures ===== */
+    .group-pics {
+      margin: 40px 0;
+    }
+
+    .group-pics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+    }
+
+    .group-pics-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.4s ease;
+    }
+
+    .group-pics-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== About Section ===== */
+    .about-section {
+      background: linear-gradient(135deg, #0077ff, #00d4ff);
+      color: #fff;
+      padding: 60px 30px;
+      border-radius: 20px;
+      margin-top: 50px;
+    }
+
+    .about-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .about-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .about-box {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 25px;
+      border-radius: 15px;
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .about-box:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* ===== Responsive Fix ===== */
+    @media(max-width: 768px) {
+      .tabs {
+        flex-wrap: wrap;
+      }
+
+      .tab-btn {
+        flex: 1;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div id="joinModal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
-      <h3>Join Us</h3>
-      <p>Select a platform to connect:</p>
-      <div class="join-options">
-        <a href="https://chat.whatsapp.com/CcBxf6M7oRc6l3PI78hb5s" target="_blank" class="join-link whatsapp">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="join-icon">
-          WhatsApp
-        </a>
-        <a href="https://www.instagram.com/computersciencedept_bahona?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-          target="_blank" class="join-link instagram">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="join-icon">
-          Instagram
-        </a>
+
+  <div class="container">
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="faculty">Faculty</button>
+      <button class="tab-btn" data-tab="students">Students</button>
+    </div>
+
+    <!-- Faculty Tab -->
+    <div class="tab-content active" id="faculty">
+      <h2>Our Faculty</h2>
+      <div class="faculty-cards">
+        <div class="faculty-card">
+          <img src="faculty1.jpg" alt="Faculty">
+          <h3>Dr. A. Sharma</h3>
+          <p>Professor In-Charge</p>
+          <p>Ph.D. in Computer Science</p>
+          <p class="quote">"Knowledge is power, but wisdom is everything."</p>
+        </div>
+        <div class="faculty-card">
+          <img src="faculty2.jpg" alt="Faculty">
+          <h3>Prof. B. Gupta</h3>
+          <p>Assistant Professor</p>
+          <p>M.Tech in AI</p>
+          <p class="quote">"Teaching is the art of igniting minds."</p>
+        </div>
+        <!-- Add more faculty -->
+      </div>
+    </div>
+
+    <!-- Student Tab -->
+    <div class="tab-content" id="students">
+      <h2>Our Students</h2>
+      <div class="student-list">
+        <div class="student-item">
+          <img src="student1.jpg" alt="Student">
+          <div>
+            <h4>Rahul Verma</h4>
+            <p>2nd Year B.Sc Computer Science</p>
+          </div>
+        </div>
+        <div class="student-item">
+          <img src="student2.jpg" alt="Student">
+          <div>
+            <h4>Priya Singh</h4>
+            <p>3rd Year B.Sc Computer Science</p>
+          </div>
+        </div>
+        <!-- Add more students here -->
+      </div>
+
+      <!-- Projects -->
+      <div class="projects">
+        <h3>Student Projects</h3>
+        <div class="project-card">
+          <h4>AI Chatbot</h4>
+          <p>By Rahul Verma</p>
+          <a href="https://github.com/rahul/chatbot" target="_blank"><i class="fab fa-github"></i> View Project</a>
+        </div>
+        <div class="project-card">
+          <h4>College Website</h4>
+          <p>By Priya Singh</p>
+          <a href="https://github.com/priya/college-site" target="_blank"><i class="fab fa-github"></i> View Project</a>
+        </div>
+      </div>
+
+      <!-- Group Pictures -->
+      <div class="group-pics">
+        <h3>Group Pictures</h3>
+        <div class="group-pics-grid">
+          <img src="group1.jpg" alt="Group">
+          <img src="group2.jpg" alt="Group">
+          <img src="group3.jpg" alt="Group">
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+      <h2>About Our Department</h2>
+      <div class="about-boxes">
+        <div class="about-box">
+          <h3>Who We Are</h3>
+          <p>The Computer Science Department fosters innovation, research, and excellence in teaching to shape future
+            tech leaders.</p>
+        </div>
+        <div class="about-box">
+          <h3>Why Choose Us?</h3>
+          <p>We offer strong faculty expertise, advanced labs, and industry connections to ensure holistic learning.</p>
+        </div>
+        <div class="about-box">
+          <h3>Benefits</h3>
+          <p>Hands-on projects, internship opportunities, and career guidance that help students succeed in real-world
+            challenges.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <header>
-    <!-- NAVIGATION -->
-    <nav class="navbar">
-      <div class="nav-left">
-        <img src="/image/BClogo.png" alt="Logo" class="logo">
-        <span class="brand">Bahona College</span>
-      </div>
-      <div class="nav-right">
-        <span><a href="/index.html" class="nav-item desktop">HOME</a></span>
-        <span><a href="/tabs/about.html" class="nav-item desktop">ABOUT</a></span>
-        <span><a href="/tabs/media.html" class="nav-item desktop">MEDIA</a></span>
-        <span><a href="/tabs/contact.html" class="nav-item desktop">CONTACT US</a></span>
-        <span class="nav-item desktop"><button id="joinBtn" class="join-box">JOIN</button></span>
-        <button class="menu-toggle " onclick="toggleMenu()">☰</button>
-      </div>
-    </nav>
-    <!-- Tab Selector -->
-    <section class="custom-tab-selector">
-      <div class="tab-pill-container">
-        <button class="pill-tab active" onclick="openDeptTab('faculty')">Faculty</button>
-        <button class="pill-tab" onclick="openDeptTab('students')">Students</button>
-        <button class="pill-tab" onclick="openDeptTab('about')">About Us</button>
-        <span class="pill-highlight" id="tabHighlighter"></span>
-      </div>
-    </section>
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-      <span><a href="/index.html" class="mobile-item">HOME</a></span>
-      <span><a href="/tabs/about.html" class="mobile-item">ABOUT</a></span>
-      <span><a href="/tabs/media.html" class="mobile-item">MEDIA</a></span>
-      <span><a href="/tabs/contact.html" class="mobile-item">CONTACT US</a></span>
-      <span class="mobile-item" onclick="joinModal.style.display = 'block'">JOIN</span>
-    </div>
-  </header>
-  <section class="tab-content-section" id="faculty">
-    <div class="faculty-slider">
-      <div class="faculty-slide" onclick="showProfessor('jayanta')">
-        <img src="/image/fa1.jpg" alt="Dr. Jayanta Bordoloi" />
-        <div class="slide-name">Dr. Jayanta Bordoloi</div>
-      </div>
-      <div class="faculty-slide" onclick="showProfessor('somi')">
-        <img src="/image/fa2.jpg" alt="Dr. Somi Kolita" />
-        <div class="slide-name">Dr. Somi Kolita</div>
-      </div>
-      <div class="faculty-slide" onclick="showProfessor('new')">
-        <img src="/image/fa2.jpg" alt="Dr. Somi Kolita" />
-        <div class="slide-name">Dr. Somi Kolita</div>
-      </div>
-    </div>
+  <!-- JavaScript for Tabs -->
+  <script>
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
 
-    <!-- Dr. Jayanta Profile -->
-    <div class="faculty-info-box active" id="prof-jayanta">
-      <div class="faculty-full-grid">
-        <div class="profile-box dark">
-          <h2>Dr. Jayanta Bordoloi</h2>
-          <p>Head of Department</p>
-        </div>
-        <div class="profile-box stat-box">
-          <div>
-            <h4>4</h4>
-            <p1>Courses</p1>
-          </div>
-          <div>
-            <h4>12</h4>
-            <p1>Years</p1>
-          </div>
-          <div>
-            <h4>5</h4>
-            <p1>Projects</p1>
-          </div>
-        </div>
-        <div class="profile-box quote-box">
-          <p>"The artist, the freelancer and the creator, we know that the privilege of doing the extra work is the work
-            itself."</p>
-          <span>— Seth Godin</span>
-        </div>
-        <div class="extra-box message-box">
-          <h3>Message to Students</h3>
-          <p>"Learning is not attained by chance, it must be sought for with ardor and attended to with diligence."</p>
-        </div>
-        <div class="profile-box message-box">
-          <p>Dr. Jayanta Bordoloi is a passionate academician with a strong background in computer science and
-            statistics. With over a decade of teaching and research experience, he has guided numerous students through
-            their academic journeys and continues to push the envelope in digital education and departmental innovation.
-          </p>
-        </div>
-        <div class="profile-box reference-box message-box">
-          <img src="/image/fa2.jpg" alt="Dr. Somi Kolita" />
-          <div>
-            <h4>Dr. Somi Kolita</h4>
-            <p>Assistant Professor</p>
-            <p>“Working with Dr. Jayanta has elevated our department’s academic depth.”</p>
-          </div>
-        </div>
-        <div class="extra-box">
-          <h3>Research Interests</h3>
-          <ul>
-            <li>AI & Machine Learning</li>
-            <li>Data Analytics</li>
-            <li>Educational Tech</li>
-          </ul>
-        </div>
-        <div class="extra-box">
-          <h3>Roles & Recognition</h3>
-          <ul>
-            <li>UGC Research Grant Recipient</li>
-            <li>National Reviewer (AICTE)</li>
-            <li>Faculty Mentor (Coding Club)</li>
-          </ul>
-        </div>
-        <div class="extra-box">
-          <h3>Memberships</h3>
-          <ul>
-            <li>CSI Member</li>
-            <li>IEEE Education Society</li>
-            <li>NAAC Committee</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    </div>
-
-    <!-- Dr. Somi Profile -->
-    <div class="faculty-info-box" id="prof-somi">
-      <div class="faculty-full-grid">
-        <div class="profile-box dark">
-          <h2>Dr. Somi Kolita</h2>
-          <p>Assistant Professor</p>
-        </div>
-        <div class="profile-box stat-box">
-          <div>
-            <h4>3</h4>
-            <p1>Courses</p1>
-          </div>
-          <div>
-            <h4>10</h4>
-            <p1>Years</p1>
-          </div>
-          <div>
-            <h4>4</h4>
-            <p1>Projects</p1>
-          </div>
-        </div>
-        <div class="profile-box quote-box">
-          <p>"Teaching is the one profession that creates all other professions."</p>
-          <span>— Anonymous</span>
-        </div>
-        <div class="extra-box message-box">
-          <h3>Message to Students</h3>
-          <p>“Every line of code is a step toward building something bigger than yourself — keep stepping.”</p>
-        </div>
-        <div class="profile-box message-box">
-          <p>Dr. Somi Kolita has over a decade of experience in research and education. With a PhD in Computer Science,
-            her innovative approach to curriculum development and mentorship continues to inspire the students of Bahona
-            College.</p>
-        </div>
-        <div class="profile-box reference-box message-box">
-          <img src="/image/fa1.jpg" alt="Dr. Jayanta Bordoloi" />
-          <div>
-            <h4>Dr. Jayanta Bordoloi</h4>
-            <p>Head of Department</p>
-            <p>“Somi brings academic rigor and warmth that makes students thrive.”</p>
-          </div>
-        </div>
-
-        <div class="extra-box">
-          <h3>Research Interests</h3>
-          <ul>
-            <li>Natural Language Processing</li>
-            <li>Gender & Tech Inclusion</li>
-            <li>Cybersecurity Education</li>
-          </ul>
-        </div>
-        <div class="extra-box">
-          <h3>Roles & Recognition</h3>
-          <ul>
-            <li>Keynote at EduCon 2023</li>
-            <li>UGC Research Grant Winner</li>
-            <li>Faculty Mentor, Girls in Tech</li>
-          </ul>
-        </div>
-        <div class="extra-box">
-          <h3>Professional Memberships</h3>
-          <ul>
-            <li>ACM-W India</li>
-            <li>International Women's Tech Forum</li>
-            <li>NAAC Advisory Cell</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Dr. new Profile -->
-    <div class="faculty-info-box" id="prof-new">
-      <div class="faculty-full-grid">
-        <div class="profile-box dark">
-          <h2>Dr. Somi Kolita</h2>
-          <p>Assistant Professor</p>
-        </div>
-        <div class="profile-box stat-box">
-          <div>
-            <h4>3</h4>
-            <p1>Courses</p1>
-          </div>
-          <div>
-            <h4>10</h4>
-            <p1>Years</p1>
-          </div>
-          <div>
-            <h4>4</h4>
-            <p1>Projects</p1>
-          </div>
-        </div>
-        <div class="profile-box quote-box">
-          <p>"Teaching is the one profession that creates all other professions."</p>
-          <span>— Anonymous</span>
-        </div>
-        <div class="extra-box message-box">
-          <h3>Message to Students</h3>
-          <p>“Every line of code is a step toward building something bigger than yourself — keep stepping.”</p>
-        </div>
-        <div class="profile-box message-box">
-          <p>Dr. Somi Kolita has over a decade of experience in research and education. With a PhD in Computer Science,
-            her innovative approach to curriculum development and mentorship continues to inspire the students of Bahona
-            College.</p>
-        </div>
-        <div class="profile-box reference-box message-box">
-          <img src="/image/fa1.jpg" alt="Dr. Jayanta Bordoloi" />
-          <div>
-            <h4>Dr. Jayanta Bordoloi</h4>
-            <p>Head of Department</p>
-            <p>“Somi brings academic rigor and warmth that makes students thrive.”</p>
-          </div>
-        </div>
-        <div class="extra-box">
-          <h3>Research Interests</h3>
-          <ul>
-            <li>Natural Language Processing</li>
-            <li>Gender & Tech Inclusion</li>
-            <li>Cybersecurity Education</li>
-          </ul>
-        </div>
-        <div class="extra-box">
-          <h3>Roles & Recognition</h3>
-          <ul>
-            <li>Keynote at EduCon 2023</li>
-            <li>UGC Research Grant Winner</li>
-            <li>Faculty Mentor, Girls in Tech</li>
-          </ul>
-        </div>
-        <div class="extra-box">
-          <h3>Professional Memberships</h3>
-          <ul>
-            <li>ACM-W India</li>
-            <li>International Women's Tech Forum</li>
-            <li>NAAC Advisory Cell</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    </div>
-  </section>
-
-  <!-- Students Section -->
-  <section id="students" class="tab-content-section">
-    <div class="students-list">
-      <div class="student-entry">
-        <img src="/image/pranit.png" alt="Pranit Hazarika" class="student-photo" />
-        <div class="student-info">
-          <h3>Pranit Hazarika</h3>
-          <p>Semester III</p>
-          <p>Site-Developer</p>
-        </div>
-      </div>
-      <div class="student-entry">
-        <img src="/image/s2.jpg" alt="Parashmoni" class="student-photo" />
-        <div class="student-info">
-          <h3>Parashmoni Dutta</h3>
-          <p>Semester V</p>
-        </div>
-      </div>
-      <div class="student-entry">
-        <img src="/image/s3.jpg" alt="P" class="student-photo" />
-        <div class="student-info">
-          <h3>Prachurya Pachani</h3>
-          <p>Semester V</p>
-        </div>
-      </div>
-      <!-- Add more students here -->
-    </div>
-  </section>
-
-  <!-- about test -->
-  <section id="about" class="about-section">
-    <div class="about-grid">
-      <div class="about-block">
-        <h2>About Our Department</h2>
-        <p>
-          The Department of Computer Science at Bahona College is committed to excellence in education, research, and
-          innovation.
-        </p>
-      </div>
-
-      <div class="about-block">
-        <h2>Our Vision</h2>
-        <p>
-          We aim to empower students with modern computing skills and a mindset for solving real-world problems,
-          fostering leaders of tomorrow.
-        </p>
-      </div>
-
-      <div class="about-block">
-        <h2>Why Choose Us?</h2>
-        <p>
-          Experienced faculty, hands-on learning, strong academic foundation, and a student-first culture make our
-          department unique.
-        </p>
-      </div>
-    </div>
-  </section>
-  <footer class="cs-footer">
-    <div class="cs-footer-container">
-      <div class="cs-footer-left">
-        <img src="/image/BClogo.png" alt="CS Dept Logo" class="cs-footer-logo">
-        <p>Welcome to the Computer Science Department of Bahona College. Empowering students through knowledge,
-          innovation, and technology.</p>
-        <div class="cs-social-icons">
-          <a href="https://www.facebook.com/profile.php?id=61572613244943&mibextid=wwXIfr&mibextid=wwXIfr"><i
-              class="fab fa-facebook-f"></i></a>
-          <a
-            href="https://www.instagram.com/computersciencedept_bahona?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
-              class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <div class="cs-footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="/tabs/contact.html">Contact us</a></li>
-          <li><a href="/tabs/developers.html">Our Developers</a></li> <!-- New Link -->
-        </ul>
-      </div>
-
-
-      <div class="cs-footer-contact">
-        <h3>Contact Info</h3>
-        <p><i class="fas fa-map-marker-alt"></i> Bahona College, Jorhat, Assam 785101</p>
-        <p><i class="fas fa-phone-alt"></i> +91 91234 56789</p>
-        <p><i class="fas fa-envelope"></i> csdept@bahonacollege.edu.in</p>
-      </div>
-    </div>
-    <div class="cs-footer-bottom">
-      <p>© 2025 Computer Science Department | Powered by cs Dept |
-        <a href="/tabs/developers.html" style="color: #fff; text-decoration: underline;">Our Developers</a>
-      </p>
-    </div>
-
-  </footer>
-  <script src="/js/script1.js"></script>
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
 </body>
 
 </html>
