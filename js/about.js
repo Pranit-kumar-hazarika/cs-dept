@@ -1,7 +1,15 @@
 // Mobile menu toggle
 function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("active");
+  const menu = document.getElementById('mobileMenu');
+  menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
 }
+  window.addEventListener('load', function () {
+    const loader = document.getElementById('preloader');
+    loader.style.opacity = '0';
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 100);
+  });
 
 // Preloader
 window.addEventListener("load", () => {
