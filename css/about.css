@@ -463,13 +463,6 @@ html {
     padding-bottom: 10px;
     scroll-behavior: smooth;
 }
-.projects-vscroll{
-    display: flex;
-    overflow-y: auto;
-    gap: 20px;
-    padding-bottom: 10px;
-    scroll-behavior: smooth;
-}
 
 .projects-scroll::-webkit-scrollbar {
     height: 8px;
@@ -542,10 +535,12 @@ html {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 18px;
+    max-height: 100px;
     background-color: #1b3c53;
     color: rgb(254, 254, 255);
     border-radius: 6px;
     text-decoration: none;
+    overflow-y: auto;
     transition: background 0.3s ease;
 }
 
@@ -556,7 +551,9 @@ html {
 /* Projects Modal */
 .modal-content.large {
     max-width: 800px;
+    max-height: 600px;
     width: 90%;
+    overflow-y: auto;
 }
 
 .all-projects {
