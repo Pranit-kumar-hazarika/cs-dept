@@ -463,6 +463,13 @@ html {
     padding-bottom: 10px;
     scroll-behavior: smooth;
 }
+.projects-vscroll{
+    display: flex;
+    overflow-y: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
 
 .projects-scroll::-webkit-scrollbar {
     height: 8px;
