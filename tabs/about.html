@@ -61,76 +61,83 @@
     </div>
   </header>
 
-
-<!-- Faculty Section -->
-<section id="faculty-section" class="faculty-section">
-  <div class="faculty-container">
-    <div class="faculty-heading">
-      <h2>Our Faculty</h2>
-      <p>Meet our dedicated Computer Science team.</p>
+  <!-- New Banner Section -->
+  <section id="dept-banner" class="dept-banner">
+    <img src="/image/bahona gate.jpeg" alt="Department Banner" class="banner-img">
+    <div class="banner-text">
+      <h2>Welcome to the Computer Science Department</h2>
+      <p>Empowering innovation, creativity & technology</p>
     </div>
-
-    <div class="faculty-cards">
-      <!-- Card 1 -->
-      <div class="faculty-card" onclick="openProfile('jayanta')">
-        <img src="/image/fa1.jpg" alt="Dr. Jayanta">
-        <h3>Dr. Jayanta</h3>
-        <p>HOD</p>
+  </section>
+  <!-- Faculty Section -->
+  <section id="faculty-section" class="faculty-section">
+    <div class="faculty-container">
+      <div class="faculty-heading">
+        <h2>Our Faculty</h2>
+        <p>Meet our dedicated Computer Science team.</p>
       </div>
 
-      <!-- Card 2 -->
-      <div class="faculty-card" onclick="openProfile('sumi')">
-        <img src="/image/fa2.jpg" alt="Prof. Sumi">
-        <h3>Prof. Sumi</h3>
-        <p>Assistant Professor</p>
-      </div>
+      <div class="faculty-cards">
+        <!-- Card 1 -->
+        <div class="faculty-card" onclick="openProfile('jayanta')">
+          <img src="/image/fa1.jpg" alt="Dr. Jayanta">
+          <h3>Dr. Jayanta</h3>
+          <p>HOD</p>
+        </div>
 
-      <!-- Card 3 -->
-      <div class="faculty-card" onclick="openProfile('biki')">
-        <img src="/image/fa3.png" alt="Biki Dutta">
-        <h3>Prof. Biki Dutta</h3>
-        <p>Professor</p>
+        <!-- Card 2 -->
+        <div class="faculty-card" onclick="openProfile('sumi')">
+          <img src="/image/fa2.jpg" alt="Prof. Sumi">
+          <h3>Prof. Sumi</h3>
+          <p>Assistant Professor</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="faculty-card" onclick="openProfile('biki')">
+          <img src="/image/fa3.png" alt="Biki Dutta">
+          <h3>Prof. Biki Dutta</h3>
+          <p>Professor</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Faculty Profile Modals -->
-<div id="jayanta" class="profile-modal">
-  <div class="profile-content">
-    <span class="close" onclick="closeProfile('jayanta')">&times;</span>
-    <img src="/image/fa1.jpg" alt="Dr. Jayanta">
-    <h2>Dr. Jayanta</h2>
-    <p><strong>Designation:</strong> HOD</p>
-    <p><strong>Expertise:</strong> Artificial Intelligence, Machine Learning</p>
-    <p><strong>Qualification:</strong> PhD in Computer Science</p>
-    <p><strong>Email:</strong> jayanta@bahonacollege.edu.in</p>
+  <!-- Faculty Profile Modals -->
+  <div id="jayanta" class="profile-modal">
+    <div class="profile-content">
+      <span class="close" onclick="closeProfile('jayanta')">&times;</span>
+      <img src="/image/fa1.jpg" alt="Dr. Jayanta">
+      <h2>Dr. Jayanta</h2>
+      <p><strong>Designation:</strong> HOD</p>
+      <p><strong>Expertise:</strong> Artificial Intelligence, Machine Learning</p>
+      <p><strong>Qualification:</strong> PhD in Computer Science</p>
+      <p><strong>Email:</strong> jayanta@bahonacollege.edu.in</p>
+    </div>
   </div>
-</div>
 
-<div id="sumi" class="profile-modal">
-  <div class="profile-content">
-    <span class="close" onclick="closeProfile('sumi')">&times;</span>
-    <img src="/image/fa2.jpg" alt="Dr. Sumi">
-    <h2>Dr. Sumi</h2>
-    <p><strong>Designation:</strong> Assistant Professor</p>
-    <p><strong>Expertise:</strong> Data Science, Operating Systems</p>
-    <p><strong>Qualification:</strong> PhD in Computer Applications</p>
-    <p><strong>Email:</strong> sumi@bahonacollege.edu.in</p>
+  <div id="sumi" class="profile-modal">
+    <div class="profile-content">
+      <span class="close" onclick="closeProfile('sumi')">&times;</span>
+      <img src="/image/fa2.jpg" alt="Dr. Sumi">
+      <h2>Dr. Sumi</h2>
+      <p><strong>Designation:</strong> Assistant Professor</p>
+      <p><strong>Expertise:</strong> Data Science, Operating Systems</p>
+      <p><strong>Qualification:</strong> PhD in Computer Applications</p>
+      <p><strong>Email:</strong> sumi@bahonacollege.edu.in</p>
+    </div>
   </div>
-</div>
 
-<div id="biki" class="profile-modal">
-  <div class="profile-content">
-    <span class="close" onclick="closeProfile('biki')">&times;</span>
-    <img src="/image/fa3.png" alt="Biki Dutta">
-    <h2>Biki Dutta</h2>
-    <p><strong>Designation:</strong> Professor</p>
-    <p><strong>Expertise:</strong> Networking, System Design</p>
-    <p><strong>Qualification:</strong> M.Sc. Computer Science</p>
-    <p><strong>Email:</strong> biki@bahonacollege.edu.in</p>
+  <div id="biki" class="profile-modal">
+    <div class="profile-content">
+      <span class="close" onclick="closeProfile('biki')">&times;</span>
+      <img src="/image/fa3.png" alt="Biki Dutta">
+      <h2>Biki Dutta</h2>
+      <p><strong>Designation:</strong> Professor</p>
+      <p><strong>Expertise:</strong> Networking, System Design</p>
+      <p><strong>Qualification:</strong> M.Sc. Computer Science</p>
+      <p><strong>Email:</strong> biki@bahonacollege.edu.in</p>
+    </div>
   </div>
-</div>
 
 
   <!-- Students Section -->
@@ -140,18 +147,18 @@
       <p class="students-subtitle">Meet the bright minds of our department</p>
 
       <div class="student-card">
-        <img src="/image/st1.jpg" alt="Student 1">
+        <img src="/image/pranit.png" alt="Student 1">
         <h3>Pranit Kumar Hazarika</h3>
       </div>
 
       <div class="student-card">
-        <img src="/image/st2.jpg" alt="Student 2">
-        <h3>XYZ Student</h3>
+        <img src="/image/pra.png" alt="Student 2">
+        <h3>Prachurya Pachani</h3>
       </div>
 
       <div class="student-card">
-        <img src="/image/st3.jpg" alt="Student 3">
-        <h3>ABC Student</h3>
+        <img src="/image/fa3.png" alt="Student 3">
+        <h3>Parashmoni Dutta</h3>
       </div>
     </div>
   </section>
@@ -162,31 +169,38 @@
       <h2 class="group-title">Group Memories</h2>
       <p class="group-subtitle">Some of our best moments together</p>
       <div class="group-gallery">
-        <img src="/image/group1.jpg" alt="Group Photo 1">
-        <img src="/image/group2.jpg" alt="Group Photo 2">
-        <img src="/image/group3.jpg" alt="Group Photo 3">
+        <img src="/image/bg10.jpg" alt="Group Photo 1">
+        <img src="/image/bg11.jpg" alt="Group Photo 2">
+        <img src="/image/bg12.jpg" alt="Group Photo 3">
       </div>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="about-section">
-    <div class="about-container">
-      <div class="about-image">
-        <img src="/image/bg1.jpg" alt="About Us Image" />
-      </div>
+    <div class="about-overlay">
       <div class="about-content">
         <h2 class="about-heading">ABOUT US</h2>
         <p class="about-text">
           The Department of Computer Science, Bahona College (est. 2023), is dedicated to nurturing
-          tech-savvy minds through a 4-year B.Sc. program under Dibrugarh University. With modern
-          ICT-enabled classrooms, air-conditioned labs, and a focus on programming, OS, and hardware, we
-          empower students for high-demand careers.
+          tech-savvy minds through a 4-year B.Sc. program under Dibrugarh University.
         </p>
         <p class="about-text">
           We promote hands-on learning through internships, seminars, field trips, and more—guided by
           friendly faculty in a dynamic, future-ready environment.
         </p>
+
+        <!-- Extra Blocks -->
+        <div class="extra-blocks">
+          <div class="block">
+            <h3>Why Choose Our Department?</h3>
+            <p>We provide ICT-enabled classrooms, advanced labs, and mentorship from expert faculty.</p>
+          </div>
+          <div class="block">
+            <h3>Benefits of Joining Us</h3>
+            <p>Opportunities in internships, research, hackathons, and skill-building programs.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -195,9 +209,30 @@
   <section id="projects-section" class="projects-section">
     <div class="projects-container">
       <h2 class="projects-title">Our Projects</h2>
-      <p class="projects-subtitle">Showcasing the creativity and work of our Computer Science students.</p>
+      <p class="projects-subtitle">Showcasing creativity of our students</p>
 
       <div class="projects-scroll">
+        <!-- Example project -->
+        <div class="project-card">
+          <h3 class="project-name">ID card maker</h3>
+          <p class="student-name">By: Pranit Kumar Hazarika</p>
+          <div class="project-links">
+            <a href="https://example.com" target="_blank" class="project-link website"><i class="fas fa-globe"></i>
+              Website</a>
+            <a href="https://github.com/Pranit-kumar-hazarika/id-card-software.git" target="_blank"
+              class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3 class="project-name">ID card maker</h3>
+          <p class="student-name">By: Pranit Kumar Hazarika</p>
+          <div class="project-links">
+            <a href="https://example.com" target="_blank" class="project-link website"><i class="fas fa-globe"></i>
+              Website</a>
+            <a href="https://github.com/Pranit-kumar-hazarika/id-card-software.git" target="_blank"
+              class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
 
         <div class="project-card">
           <h3 class="project-name">ID card maker</h3>
@@ -211,28 +246,113 @@
         </div>
 
         <div class="project-card">
-          <h3 class="project-name">College Event Management Portal</h3>
-          <p class="student-name">By: XYZ Student</p>
+          <h3 class="project-name">ID card maker</h3>
+          <p class="student-name">By: Pranit Kumar Hazarika</p>
           <div class="project-links">
             <a href="https://example.com" target="_blank" class="project-link website"><i class="fas fa-globe"></i>
               Website</a>
-            <a href="" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/Pranit-kumar-hazarika/id-card-software.git" target="_blank"
+              class="project-link github"><i class="fab fa-github"></i> GitHub</a>
           </div>
         </div>
 
         <div class="project-card">
-          <h3 class="project-name">Library Management System</h3>
-          <p class="student-name">By: ABC Student</p>
+          <h3 class="project-name">ID card maker</h3>
+          <p class="student-name">By: Pranit Kumar Hazarika</p>
           <div class="project-links">
-            <a href="#" target="_blank" class="project-link website"><i class="fas fa-globe"></i> Website</a>
-            <a href="#" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://example.com" target="_blank" class="project-link website"><i class="fas fa-globe"></i>
+              Website</a>
+            <a href="https://github.com/Pranit-kumar-hazarika/id-card-software.git" target="_blank"
+              class="project-link github"><i class="fab fa-github"></i> GitHub</a>
           </div>
         </div>
+
+        <div class="project-card">
+          <h3 class="project-name">ID card maker</h3>
+          <p class="student-name">By: Pranit Kumar Hazarika</p>
+          <div class="project-links">
+            <a href="https://example.com" target="_blank" class="project-link website"><i class="fas fa-globe"></i>
+              Website</a>
+            <a href="https://github.com/Pranit-kumar-hazarika/id-card-software.git" target="_blank"
+              class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-name">ID card maker</h3>
+          <p class="student-name">By: Pranit Kumar Hazarika</p>
+          <div class="project-links">
+            <a href="https://example.com" target="_blank" class="project-link website"><i class="fas fa-globe"></i>
+              Website</a>
+            <a href="https://github.com/Pranit-kumar-hazarika/id-card-software.git" target="_blank"
+              class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
       </div>
 
-      <a href="" class="view-more-btn">View All Projects</a>
+      <!-- View All Projects -->
+      <button class="view-more-btn" onclick="openProjects()">View All Projects</button>
     </div>
   </section>
+
+  <!-- Projects Modal -->
+  <div id="projectsModal" class="modal">
+    <div class="modal-content large">
+      <span class="close" onclick="closeProjects()">&times;</span>
+      <h2>All Projects</h2>
+      <div class="all-projects">
+        <div class="project-card">
+          <h3>Library Management System</h3>
+          <p>By: ABC Student</p>
+          <a href="#" target="_blank" class="project-link website"><i class="fas fa-globe"></i> Live Demo</a>
+          <a href="#" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Library Management System</h3>
+          <p>By: ABC Student</p>
+          <a href="#" target="_blank" class="project-link website"><i class="fas fa-globe"></i> Live Demo</a>
+          <a href="#" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Library Management System</h3>
+          <p>By: ABC Student</p>
+          <a href="#" target="_blank" class="project-link website"><i class="fas fa-globe"></i> Live Demo</a>
+          <a href="#" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Library Management System</h3>
+          <p>By: ABC Student</p>
+          <a href="#" target="_blank" class="project-link website"><i class="fas fa-globe"></i> Live Demo</a>
+          <a href="#" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Library Management System</h3>
+          <p>By: ABC Student</p>
+          <a href="#" target="_blank" class="project-link website"><i class="fas fa-globe"></i> Live Demo</a>
+          <a href="#" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Library Management System</h3>
+          <p>By: ABC Student</p>
+          <a href="#" target="_blank" class="project-link website"><i class="fas fa-globe"></i> Live Demo</a>
+          <a href="#" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Library Management System</h3>
+          <p>By: ABC Student</p>
+          <a href="#" target="_blank" class="project-link website"><i class="fas fa-globe"></i> Live Demo</a>
+          <a href="#" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Library Management System</h3>
+          <p>By: ABC Student</p>
+          <a href="#" target="_blank" class="project-link website"><i class="fas fa-globe"></i> Live Demo</a>
+          <a href="#" target="_blank" class="project-link github"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="cs-footer">

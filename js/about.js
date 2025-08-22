@@ -26,3 +26,11 @@ function openProfile(id) {
 function closeProfile(id) {
   document.getElementById(id).style.display = "none";
 }
+//projects
+function openProjects() {
+  document.getElementById("projectsModal").style.display = "block";
+}
+
+function closeProjects() {
+  document.getElementById("projectsModal").style.display = "none";
+}
