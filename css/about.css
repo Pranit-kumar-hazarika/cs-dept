@@ -231,7 +231,6 @@ html {
 /* ---------------- FACULTY ---------------- */
 .faculty-section {
     padding: 120px 10%;
-    background: linear-gradient(to bottom, #2467e4, #6ca6fd);
     text-align: center;
 }
 
@@ -246,11 +245,11 @@ html {
 .faculty-heading h2 {
     font-size: 3em;
     margin-bottom: 10px;
-    color: #000;
+    color: #ffffff;
 }
 
 .faculty-heading p {
-    color: #030303;
+    color: #f0f0f0;
     font-size: 1em;
     margin-bottom: 30px;
 }
@@ -342,7 +341,6 @@ html {
 /* ---------------- STUDENTS ---------------- */
 .students-section {
     padding: 80px 10%;
-    background: linear-gradient(to bottom, #2467e4, #6ca6fd);
     text-align: center;
 }
 
@@ -385,7 +383,6 @@ html {
 /* ---------------- GROUP PHOTOS ---------------- */
 .group-section {
     padding: 30px 10%;
-    background: linear-gradient(to bottom, #2467e4, #6ca6fd);
     text-align: center;
 }
 
@@ -396,14 +393,14 @@ html {
 }
 
 .group-title {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 15px;
-    color: #222;
+    color: #ffffff;
 }
 
 .group-subtitle {
-    color: #030303;
-    font-size: 1em;
+    color: #f0f0f0;
+    font-size: 1rem;
     margin-bottom: 30px;
 }
 
@@ -503,7 +500,6 @@ html {
 
 /* Projects Section */
 .projects-section {
-    background: linear-gradient(to bottom, #2467e4, #6ca6fd);
     padding: 50px 20px;
 }
 
@@ -516,12 +512,12 @@ html {
 .projects-title {
     font-size: 4em;
     margin-bottom: 10px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .projects-subtitle {
     font-size: 1em;
-    color: #030303;
+    color: #f0f0f0;
     margin-bottom: 30px;
 }
 
@@ -659,6 +655,20 @@ html {
 .projects-vscroll::-webkit-scrollbar-thumb:hover {
     background: #1b3c53;
 }
+
+/* Wrapper for faculty, group, and projects */
+.unified-sections {
+    background: linear-gradient(to bottom, #0a1d66, #2467e4, #6ca6fd);
+    /* dark → medium → light blue */
+}
+
+/* Make individual sections transparent */
+.faculty-section,
+.group-section,
+.projects-section {
+    background: transparent !important;
+}
+
 
 /* ---------------- FOOTER ---------------- */
 .cs-footer {
