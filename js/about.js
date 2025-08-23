@@ -3,13 +3,13 @@ function toggleMenu() {
   const menu = document.getElementById('mobileMenu');
   menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
 }
-  window.addEventListener('load', function () {
-    const loader = document.getElementById('preloader');
-    loader.style.opacity = '0';
-    setTimeout(() => {
-      loader.style.display = 'none';
-    }, 100);
-  });
+window.addEventListener('load', function () {
+  const loader = document.getElementById('preloader');
+  loader.style.opacity = '0';
+  setTimeout(() => {
+    loader.style.display = 'none';
+  }, 100);
+});
 
 // Preloader
 window.addEventListener("load", () => {
@@ -34,11 +34,25 @@ function openProfile(id) {
 function closeProfile(id) {
   document.getElementById(id).style.display = "none";
 }
-//projects
+
+// Projects modal
 function openProjects() {
-  document.getElementById("projectsModal").style.display = "block";
+  document.getElementById('projectsModal').style.display = 'block';
 }
 
 function closeProjects() {
-  document.getElementById("projectsModal").style.display = "none";
+  document.getElementById('projectsModal').style.display = 'none';
 }
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
