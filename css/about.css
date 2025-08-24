@@ -180,7 +180,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
     padding: 40px 60px;
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -193,7 +193,7 @@ html {
     color: white;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    font-size: 35px;
+    font-size: 60px;
     font-weight: 700;
     margin-bottom: 16px;
     line-height: 1.2;
@@ -207,7 +207,7 @@ html {
     text-align: center;
 }
 
-/* ------------ Responsive Adjustments ------------ */
+/* -- Responsive Adjustments -- */
 
 /* Tablets */
 @media (max-width: 992px) {
@@ -221,7 +221,7 @@ html {
     }
 
     .banner-text h2 {
-        font-size: 28px;
+        font-size: 60px;
     }
 
     .banner-text p {
@@ -241,7 +241,7 @@ html {
     }
 
     .banner-text h2 {
-        font-size: 22px;
+        font-size: 40px;
     }
 
     .banner-text p {
