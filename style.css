@@ -738,7 +738,7 @@
     transition: color 0.3s ease-in-out;
   }
 
-  .links-box a:hover {
+  .links-box a:hover {  
     color: #e88024;
   }
 
