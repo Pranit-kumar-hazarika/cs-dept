@@ -51,7 +51,7 @@ html {
 }
 
 .brand {
-    font-size: 20px;
+    font-size: clamp(16px, 4vw, 20px);
     font-weight: bold;
     color: #fff;
 }
@@ -64,7 +64,7 @@ html {
 
 .nav-item {
     text-decoration: none;
-    font-size: 16px;
+    font-size: clamp(14px, 3vw, 16px);
     color: #ffffff;
     font-weight: 500;
     cursor: pointer;
@@ -84,6 +84,7 @@ html {
     cursor: pointer;
     font-weight: 600;
     transition: 0.3s ease;
+    font-size: clamp(12px, 2.5vw, 14px);
 }
 
 .join-box:hover {
@@ -142,14 +143,45 @@ html {
     color: #00b8a9;
 }
 
-/* RESPONSIVENESS */
+/* NAVBAR RESPONSIVENESS */
 @media (max-width: 768px) {
+    .navbar {
+        width: 95%;
+        padding: 8px 15px;
+        margin: 15px auto;
+    }
+    
+    .nav-right {
+        gap: 15px;
+    }
+    
     .nav-item.desktop {
         display: none;
     }
 
     .menu-toggle {
         display: block;
+    }
+    
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        width: 98%;
+        padding: 6px 12px;
+        margin: 10px auto;
+    }
+    
+    .nav-right {
+        gap: 10px;
+    }
+    
+    .join-box {
+        padding: 4px 8px;
     }
 }
 
@@ -163,7 +195,9 @@ html {
 .dept-banner {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 100vh;
+    min-height: 400px;
+    max-height: 800px;
     overflow: hidden;
 }
 
@@ -181,19 +215,18 @@ html {
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(8px);
-    padding: 40px 60px;
+    padding: clamp(20px, 5vw, 60px);
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    max-width: 100%;
-    width: 700px;
+    max-width: 90%;
+    width: clamp(300px, 80vw, 700px);
 }
 
-/* Desktop/Laptop */
 .banner-text h2 {
     color: white;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    font-size: 60px;
+    font-size: clamp(24px, 8vw, 60px);
     font-weight: 700;
     margin-bottom: 16px;
     line-height: 1.2;
@@ -202,83 +235,70 @@ html {
 
 .banner-text p {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 20px;
+    font-size: clamp(14px, 3vw, 20px);
     font-weight: 400;
     text-align: center;
 }
 
-/* -- Responsive Adjustments -- */
-
-/* Tablets */
+/* BANNER RESPONSIVENESS */
 @media (max-width: 992px) {
     .dept-banner {
-        height: 400px;
+        height: 70vh;
+        min-height: 350px;
     }
-
+    
     .banner-text {
-        padding: 30px 40px;
-        width: 90%;
-    }
-
-    .banner-text h2 {
-        font-size: 60px;
-    }
-
-    .banner-text p {
-        font-size: 18px;
+        border-radius: 20px;
     }
 }
 
-/* Mobile */
 @media (max-width: 576px) {
     .dept-banner {
-        height: 300px;
+        height: 60vh;
+        min-height: 300px;
     }
 
     .banner-text {
-        padding: 20px 25px;
         border-radius: 16px;
-    }
-
-    .banner-text h2 {
-        font-size: 40px;
-    }
-
-    .banner-text p {
-        font-size: 14px;
+        top: 60%;
     }
 }
-
-
 
 /* ---------------- FACULTY ---------------- */
 .faculty-section {
-    padding: 120px 10%;
+    padding: clamp(60px, 15vw, 120px) clamp(5%, 10vw, 10%);
     text-align: center;
 }
 
-.faculty-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-top: 30px;
-}
-
 .faculty-heading h2 {
-    font-size: 3em;
+    font-size: clamp(2rem, 6vw, 3em);
     margin-bottom: 10px;
     color: #ffffff;
 }
 
 .faculty-heading p {
     color: #f0f0f0;
-    font-size: 1em;
+    font-size: clamp(0.9rem, 3vw, 1em);
     margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faculty-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .faculty-card {
-    width: 200px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
     background: #a7bcff;
     border-radius: 15px;
     padding: 15px;
@@ -294,20 +314,39 @@ html {
 
 .faculty-card img {
     width: 100%;
-    height: 250px;
+    height: clamp(200px, 30vw, 250px);
     border-radius: 12px;
     object-fit: cover;
 }
 
 .faculty-card h3 {
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     color: #222;
 }
 
 .faculty-card p {
     color: #666;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+}
+
+/* FACULTY RESPONSIVENESS */
+@media (max-width: 768px) {
+    .faculty-cards {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faculty-cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .faculty-card {
+        padding: 12px;
+    }
 }
 
 /* Profile Modal */
@@ -322,21 +361,24 @@ html {
     background: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .profile-content {
     background: #fff;
     padding: 25px;
     border-radius: 12px;
-    max-width: 500px;
-    width: 90%;
+    max-width: 90%;
+    width: clamp(300px, 80vw, 500px);
     text-align: center;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .profile-content img {
-    width: 180px;
-    height: 220px;
+    width: clamp(120px, 40vw, 180px);
+    height: clamp(150px, 50vw, 220px);
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 15px;
@@ -344,11 +386,13 @@ html {
 
 .profile-content h2 {
     margin-bottom: 10px;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
 }
 
 .profile-content p {
     margin: 6px 0;
     color: #444;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .profile-modal .close {
@@ -363,12 +407,12 @@ html {
 
 /* ---------------- STUDENTS ---------------- */
 .students-section {
-    padding: 80px 10%;
+    padding: clamp(40px, 10vw, 80px) clamp(5%, 10vw, 10%);
     text-align: center;
 }
 
 .students-title {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
     margin-bottom: 20px;
     color: #000000;
 }
@@ -381,15 +425,17 @@ html {
     border-radius: 10px;
     padding: 15px 20px;
     margin: 15px auto;
-    max-width: 500px;
+    max-width: 90%;
+    width: clamp(300px, 80vw, 500px);
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
-.student-card>h3 {
+.student-card h3 {
     color: #000000;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    flex: 1;
 }
 
 .student-card:hover {
@@ -397,47 +443,68 @@ html {
 }
 
 .student-card img {
-    width: 60px;
-    height: 60px;
+    width: clamp(50px, 15vw, 60px);
+    height: clamp(50px, 15vw, 60px);
     border-radius: 50%;
     object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* STUDENTS RESPONSIVENESS */
+@media (max-width: 480px) {
+    .student-card {
+        padding: 12px 15px;
+        gap: 12px;
+    }
 }
 
 /* ---------------- GROUP PHOTOS ---------------- */
 .group-section {
-    padding: 30px 10%;
+    padding: clamp(30px, 8vw, 80px) clamp(5%, 10vw, 10%);
     text-align: center;
 }
 
 .group-container {
     max-width: 1400px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .group-title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem);
     margin-bottom: 15px;
     color: #ffffff;
 }
 
 .group-subtitle {
     color: #f0f0f0;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 3vw, 1rem);
     margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.group-gallery-container {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: clamp(20px, 5vw, 40px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .group-gallery {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
+    justify-items: center;
 }
 
 .group-gallery img {
-    width: 250px;
-    height: 180px;
+    width: 100%;
+    max-width: 300px;
+    height: clamp(150px, 40vw, 200px);
     border-radius: 12px;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -448,6 +515,32 @@ html {
     transform: scale(1.05);
 }
 
+/* GROUP RESPONSIVENESS */
+@media (max-width: 768px) {
+    .group-gallery-container {
+        padding: clamp(15px, 4vw, 25px);
+        border-radius: 16px;
+    }
+    
+    .group-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .group-gallery-container {
+        padding: clamp(12px, 3vw, 20px);
+        border-radius: 12px;
+        border-width: 1.5px;
+    }
+    
+    .group-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+}
+
 /* About Section */
 .about-section {
     position: relative;
@@ -455,14 +548,14 @@ html {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 120px 5% 80px;
+    padding: clamp(60px, 15vw, 120px) clamp(5%, 8vw, 5%) clamp(40px, 10vw, 80px);
     color: white;
 }
 
 .about-overlay {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
-    padding: 60px;
+    padding: clamp(30px, 8vw, 60px);
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     max-width: 1200px;
@@ -471,7 +564,7 @@ html {
 
 .about-heading {
     font-family: 'Poppins', sans-serif;
-    font-size: 48px;
+    font-size: clamp(2rem, 7vw, 48px);
     font-weight: 700;
     color: white;
     margin-bottom: 32px;
@@ -480,7 +573,7 @@ html {
 }
 
 .about-text {
-    font-size: 18px;
+    font-size: clamp(1rem, 3vw, 18px);
     line-height: 1.8;
     margin-bottom: 24px;
     color: rgba(255, 255, 255, 0.9);
@@ -488,15 +581,15 @@ html {
 
 .extra-blocks {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
-    margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(20px, 5vw, 32px);
+    margin-top: clamp(30px, 8vw, 60px);
 }
 
 .block {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    padding: 32px;
+    padding: clamp(20px, 5vw, 32px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
@@ -509,7 +602,7 @@ html {
 
 .block h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+    font-size: clamp(1.2rem, 4vw, 24px);
     font-weight: 600;
     color: white;
     margin-bottom: 16px;
@@ -518,12 +611,33 @@ html {
 .block p {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
+    font-size: clamp(0.9rem, 2.5vw, 16px);
 }
 
+/* ABOUT RESPONSIVENESS */
+@media (max-width: 768px) {
+    .about-section {
+        background-attachment: scroll;
+    }
+    
+    .extra-blocks {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .about-overlay {
+        border-radius: 16px;
+    }
+    
+    .extra-blocks {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* Projects Section */
 .projects-section {
-    padding: 50px 20px;
+    padding: clamp(30px, 8vw, 50px) clamp(15px, 5vw, 20px);
 }
 
 .projects-container {
@@ -533,21 +647,24 @@ html {
 }
 
 .projects-title {
-    font-size: 4em;
+    font-size: clamp(2.5em, 7vw, 4em);
     margin-bottom: 10px;
     color: rgb(255, 255, 255);
 }
 
 .projects-subtitle {
-    font-size: 1em;
+    font-size: clamp(0.9em, 3vw, 1em);
     color: #f0f0f0;
     margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .projects-scroll {
     display: flex;
     overflow-x: auto;
-    gap: 32px;
+    gap: clamp(15px, 5vw, 32px);
     padding: 20px 0 40px;
     scroll-behavior: smooth;
 }
@@ -567,7 +684,8 @@ html {
 }
 
 .project-card {
-    min-width: 300px;
+    min-width: clamp(250px, 80vw, 300px);
+    flex-shrink: 0;
     background: rgb(152, 171, 253);
     padding: 20px;
     border-radius: 12px;
@@ -582,7 +700,7 @@ html {
 }
 
 .project-name {
-    font-size: 1.2em;
+    font-size: clamp(1rem, 3vw, 1.2em);
     margin-bottom: 5px;
     color: #000000;
     font-weight: bold;
@@ -590,13 +708,14 @@ html {
 
 .student-name {
     color: #000000;
-    font-size: 0.9em;
+    font-size: clamp(0.8em, 2.5vw, 0.9em);
     margin-bottom: 15px;
 }
 
 .project-links {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .project-link {
@@ -606,8 +725,11 @@ html {
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 6px;
-    font-size: 0.9em;
+    font-size: clamp(0.8em, 2.5vw, 0.9em);
     transition: background 0.3s;
+    flex: 1;
+    justify-content: center;
+    min-width: 80px;
 }
 
 .project-link.website {
@@ -634,17 +756,45 @@ html {
     border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s ease;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .view-more-btn:hover {
     background-color: #456882;
 }
 
+/* PROJECTS RESPONSIVENESS */
+@media (max-width: 768px) {
+    .project-card {
+        min-width: clamp(220px, 85vw, 280px);
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-scroll {
+        gap: 15px;
+    }
+    
+    .project-card {
+        min-width: clamp(200px, 90vw, 250px);
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .project-link {
+        flex: none;
+    }
+}
+
 /* Projects Modal - Vertical Layout */
 .modal-content.large {
-    max-width: 800px;
-    max-height: 600px;
-    width: 90%;
+    max-width: 90%;
+    width: clamp(300px, 90vw, 800px);
+    max-height: 90vh;
     overflow-y: auto;
 }
 
@@ -656,7 +806,7 @@ html {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-height: 400px;
+    max-height: clamp(300px, 60vh, 400px);
     overflow-y: auto;
     padding-right: 10px;
 }
@@ -682,7 +832,6 @@ html {
 /* Wrapper for faculty, group, and projects */
 .unified-sections {
     background: linear-gradient(to bottom, #0a1d66, #2467e4, #6ca6fd);
-    /* dark → medium → light blue */
 }
 
 /* Make individual sections transparent */
@@ -692,30 +841,29 @@ html {
     background: transparent !important;
 }
 
-
 /* ---------------- FOOTER ---------------- */
 .cs-footer {
     background: #222;
     color: #ddd;
-    padding: 50px 10% 20px;
+    padding: clamp(30px, 8vw, 50px) clamp(5%, 10vw, 10%) 20px;
 }
 
 .cs-footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(20px, 5vw, 40px);
+    margin-bottom: 20px;
 }
 
 .cs-footer-logo {
-    height: 60px;
+    height: clamp(50px, 10vw, 60px);
     margin-bottom: 10px;
 }
 
 .cs-social-icons a {
     margin-right: 12px;
     color: #ddd;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     transition: color 0.3s;
 }
 
@@ -735,6 +883,7 @@ html {
     color: #ddd;
     text-decoration: none;
     transition: color 0.3s;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .cs-footer-links a:hover {
@@ -743,6 +892,7 @@ html {
 
 .cs-footer-contact p {
     margin: 6px 0;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .cs-footer-bottom {
@@ -750,7 +900,22 @@ html {
     margin-top: 30px;
     border-top: 1px solid #444;
     padding-top: 15px;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+/* FOOTER RESPONSIVENESS */
+@media (max-width: 768px) {
+    .cs-footer-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cs-footer-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 /* ---------------- MODALS ---------------- */
@@ -764,24 +929,27 @@ html {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
+    margin: 5% auto;
+    padding: clamp(15px, 5vw, 20px);
     border-radius: 10px;
     width: 90%;
     max-width: 400px;
     text-align: center;
     color: #333;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .close {
     color: #000;
     float: right;
-    font-size: 24px;
+    font-size: clamp(20px, 5vw, 24px);
     font-weight: bold;
     cursor: pointer;
 }
@@ -795,13 +963,13 @@ html {
     align-items: center;
     gap: 12px;
     justify-content: center;
-    padding: 14px 24px;
+    padding: clamp(10px, 3vw, 14px) clamp(15px, 5vw, 24px);
     border-radius: 8px;
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: clamp(1rem, 4vw, 18px);
     font-weight: bold;
-    width: 80%;
+    width: 90%;
     max-width: 300px;
     margin: 10px auto;
     transition: transform 0.2s ease;
@@ -812,8 +980,9 @@ html {
 }
 
 .join-icon {
-    width: 28px;
-    height: 28px;
+    width: clamp(20px, 6vw, 28px);
+    height: clamp(20px, 6vw, 28px);
+    flex-shrink: 0;
 }
 
 .whatsapp {
@@ -822,4 +991,39 @@ html {
 
 .instagram {
     background-color: #E1306C;
+}
+
+/* MODAL RESPONSIVENESS */
+@media (max-width: 480px) {
+    .modal {
+        padding: 10px;
+    }
+    
+    .modal-content {
+        margin: 2% auto;
+        width: 95%;
+    }
+    
+    .join-link {
+        width: 95%;
+        gap: 8px;
+    }
+}
+
+/* Additional responsive utilities */
+@media (max-width: 320px) {
+    .navbar {
+        width: 100%;
+        margin: 5px auto;
+        border-radius: 0;
+    }
+    
+    .banner-text {
+        border-radius: 12px;
+    }
+    
+    .faculty-cards,
+    .group-gallery {
+        gap: 8px;
+    }
 }
