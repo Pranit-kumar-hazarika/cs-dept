@@ -150,11 +150,11 @@ html {
         padding: 8px 15px;
         margin: 15px auto;
     }
-    
+
     .nav-right {
         gap: 15px;
     }
-    
+
     .nav-item.desktop {
         display: none;
     }
@@ -162,7 +162,7 @@ html {
     .menu-toggle {
         display: block;
     }
-    
+
     .logo {
         width: 35px;
         height: 35px;
@@ -175,11 +175,11 @@ html {
         padding: 6px 12px;
         margin: 10px auto;
     }
-    
+
     .nav-right {
         gap: 10px;
     }
-    
+
     .join-box {
         padding: 4px 8px;
     }
@@ -248,7 +248,7 @@ html {
         height: 70vh;
         min-height: 350px;
     }
-    
+
     .banner-text {
         border-radius: 20px;
     }
@@ -345,7 +345,7 @@ html {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 15px;
     }
-    
+
     .faculty-card {
         padding: 12px;
     }
@@ -367,7 +367,7 @@ html {
 }
 
 .profile-content {
-    background: #fff;
+    background: #a7bcff;
     padding: 25px;
     border-radius: 12px;
     max-width: 90%;
@@ -387,6 +387,7 @@ html {
 }
 
 .profile-content h2 {
+    color: #000000;
     margin-bottom: 10px;
     font-size: clamp(1.2rem, 4vw, 1.5rem);
 }
@@ -525,12 +526,12 @@ html {
         padding: clamp(15px, 4vw, 25px);
         border-radius: 16px;
     }
-    
+
     .group-gallery {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 12px;
     }
-    
+
     .group-gallery img {
         max-width: 350px;
         height: clamp(180px, 45vw, 250px);
@@ -543,12 +544,12 @@ html {
         border-radius: 12px;
         border-width: 1.5px;
     }
-    
+
     .group-gallery {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 10px;
     }
-    
+
     .group-gallery img {
         max-width: 300px;
         height: clamp(160px, 40vw, 220px);
@@ -633,7 +634,7 @@ html {
     .about-section {
         background-attachment: scroll;
     }
-    
+
     .extra-blocks {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
@@ -643,7 +644,7 @@ html {
     .about-overlay {
         border-radius: 16px;
     }
-    
+
     .extra-blocks {
         grid-template-columns: 1fr;
     }
@@ -789,16 +790,16 @@ html {
     .projects-scroll {
         gap: 15px;
     }
-    
+
     .project-card {
         min-width: clamp(200px, 90vw, 250px);
     }
-    
+
     .project-links {
         flex-direction: column;
         gap: 8px;
     }
-    
+
     .project-link {
         flex: none;
     }
@@ -1012,12 +1013,12 @@ html {
     .modal {
         padding: 10px;
     }
-    
+
     .modal-content {
         margin: 2% auto;
         width: 95%;
     }
-    
+
     .join-link {
         width: 95%;
         gap: 8px;
@@ -1129,18 +1130,24 @@ html {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes zoomIn {
-    from { 
-        opacity: 0; 
-        transform: scale(0.8); 
+    from {
+        opacity: 0;
+        transform: scale(0.8);
     }
-    to { 
-        opacity: 1; 
-        transform: scale(1); 
+
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -1153,21 +1160,21 @@ html {
         width: 40px;
         height: 40px;
     }
-    
+
     .image-modal-nav {
         font-size: 24px;
         width: 40px;
         height: 40px;
     }
-    
+
     .image-modal-prev {
         left: -50px;
     }
-    
+
     .image-modal-next {
         right: -50px;
     }
-    
+
     .image-counter {
         bottom: -40px;
         font-size: 12px;
@@ -1183,39 +1190,40 @@ html {
         width: 35px;
         height: 35px;
     }
-    
+
     .image-modal-nav {
         font-size: 20px;
         width: 35px;
         height: 35px;
         top: 50%;
     }
-    
+
     .image-modal-prev {
         left: 10px;
     }
-    
+
     .image-modal-next {
         right: 10px;
     }
-    
+
     .image-counter {
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
     }
 }
+
 @media (max-width: 320px) {
     .navbar {
         width: 100%;
         margin: 5px auto;
         border-radius: 0;
     }
-    
+
     .banner-text {
         border-radius: 12px;
     }
-    
+
     .faculty-cards,
     .group-gallery {
         gap: 8px;
