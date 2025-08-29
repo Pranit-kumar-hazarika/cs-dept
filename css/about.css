@@ -319,6 +319,12 @@ html {
     transform: translateY(-6px);
 }
 
+/* Center the last card if total cards are odd */
+.faculty-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;   
+    justify-self: center;  
+}
+
 .faculty-card img {
     width: 100%;
     height: clamp(200px, 30vw, 250px);
@@ -333,7 +339,8 @@ html {
 }
 
 .faculty-card p {
-    color: #666;
+    font-weight: 500;
+    color: #1d1d1d;
     font-size: clamp(0.8rem, 2.5vw, 0.9rem);
 }
 
@@ -347,14 +354,16 @@ html {
 
 @media (max-width: 480px) {
     .faculty-cards {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: 1fr; 
         gap: 15px;
     }
 
-    .faculty-card {
-        padding: 12px;
+    .faculty-card:last-child:nth-child(odd) {
+        grid-column: auto;       
+        justify-self: stretch;   
     }
 }
+
 
 /* Profile Modal */
 .profile-modal {
